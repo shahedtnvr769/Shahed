@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Local development server (not needed for Vercel)
+server.js
+
+# Environment files (keep secrets safe)
+.env
+.env.local
+.env.production
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*

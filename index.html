@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html class="dark" lang="en" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Luxury Editorial Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&amp;family=DM+Sans:opsz,wght@9..40,400;500;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-variant": "#353534",
+                        "surface-container-highest": "#353534",
+                        "surface-dim": "#131313",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-tertiary-container": "#233a65",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary": "#c8c6c5",
+                        "surface-bright": "#3a3939",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "primary-fixed": "#ffdea5",
+                        "tertiary-fixed": "#d8e2ff",
+                        "on-secondary-container": "#b7b5b4",
+                        "on-primary-container": "#4e3700",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-fixed": "#261900",
+                        "surface-container": "#201f1f",
+                        "on-tertiary-fixed-variant": "#304671",
+                        "surface-tint": "#e9c176",
+                        "on-error": "#690005",
+                        "background": "#131313",
+                        "on-tertiary-fixed": "#001a41",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "outline-variant": "#4e4639",
+                        "tertiary": "#b0c6f9",
+                        "on-surface-variant": "#d1c5b4",
+                        "tertiary-fixed-dim": "#b0c6f9",
+                        "primary-container": "#c5a059",
+                        "tertiary-container": "#8fa5d6",
+                        "error": "#ffb4ab",
+                        "primary": "#e9c176",
+                        "error-container": "#93000a",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#e9c176",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "outline": "#9a8f80",
+                        "inverse-surface": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "secondary-container": "#474746",
+                        "surface": "#131313",
+                        "inverse-primary": "#775a19",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-tertiary": "#173059",
+                        "on-primary": "#412d00",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-on-surface": "#313030",
+                        "on-secondary": "#313030"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "container-max": "1440px",
+                        "gutter": "32px",
+                        "margin-desktop": "80px",
+                        "margin-mobile": "24px",
+                        "unit": "8px"
+                    },
+                    fontFamily: {
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "body-lg": ["DM Sans"],
+                        "body-md": ["DM Sans"],
+                        "label-caps": ["DM Sans"],
+                        "quote": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "handwritten": ["Caveat", "cursive"]
+                    },
+                    fontSize: {
+                        "headline-md": ["32px", { "lineHeight": "42px", "fontWeight": "500" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }],
+                        "quote": ["24px", { "lineHeight": "36px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "display-lg": ["72px", { "lineHeight": "84px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            scroll-behavior: smooth;
+        }
+
+        .font-handwritten {
+            font-family: 'Caveat', cursive, sans-serif;
+        }
+
+        .glass-panel {
+            background: rgba(19, 19, 19, 0.7);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .ghost-border {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hover-gold-outline {
+            border: 1px solid #c5a059;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .hover-gold-outline:hover {
+            background-color: #c5a059;
+            color: #0d0d0d;
+        }
+
+        /* Note Paper Breeze Styles */
+        @keyframes breeze {
+
+            0%,
+            100% {
+                transform: rotate(-1deg) translateY(0) scale(1) skewX(-0.5deg);
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45), 0 5px 15px rgba(0, 0, 0, 0.2);
+            }
+
+            50% {
+                transform: rotate(2deg) translateY(-8px) scale(1.005) skewX(1deg);
+                box-shadow: 0 30px 50px rgba(0, 0, 0, 0.35), 0 12px 25px rgba(0, 0, 0, 0.15);
+            }
+        }
+
+        .note-paper-breeze {
+            animation: breeze 7s ease-in-out infinite;
+            transform-origin: top center;
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .note-paper-breeze:hover {
+            animation-play-state: paused;
+            transform: rotate(0deg) scale(1.03) translateY(-4px);
+            box-shadow: 0 35px 65px rgba(0, 0, 0, 0.55);
+        }
+
+        /* Custom Scrollbar for dynamic thumbnails and admin lists */
+        .custom-scrollbar::-webkit-scrollbar {
+            height: 4px;
+            width: 4px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #c5a059;
+            border-radius: 2px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #e9c176;
+        }
+
+        #showcase-image {
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        /* Hero background and floating logo styles */
+        .hero-grid {
+            background-size: 60px 60px;
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            mask-image: radial-gradient(circle at center, black 40%, transparent 85%);
+            -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 85%);
+        }
+
+        .floating-logo-container {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+        }
+
+        .floating-logo-container:hover {
+            opacity: 0.85 !important;
+            transform: scale(1.15) !important;
+            z-index: 30;
+        }
+
+        /* Float animations with different cycles & amplitudes to look completely natural */
+        @keyframes float1 {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(6deg);
+            }
+        }
+
+        @keyframes float2 {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(15px) rotate(-6deg);
+            }
+        }
+
+        @keyframes float3 {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-10px) rotate(3deg);
+            }
+        }
+
+        @keyframes float4 {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(12px) rotate(-3deg);
+            }
+        }
+
+        @keyframes float5 {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-14px) rotate(-4deg);
+            }
+        }
+
+        @keyframes float6 {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(10px) rotate(5deg);
+            }
+        }
+
+        .animate-float-1 {
+            animation: float1 6s ease-in-out infinite;
+        }
+
+        .animate-float-2 {
+            animation: float2 7s ease-in-out infinite;
+        }
+
+        .animate-float-3 {
+            animation: float3 8s ease-in-out infinite;
+        }
+
+        .animate-float-4 {
+            animation: float4 9s ease-in-out infinite;
+        }
+
+        .animate-float-5 {
+            animation: float5 6.5s ease-in-out infinite;
+        }
+
+        .animate-float-6 {
+            animation: float6 7.5s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="antialiased font-body-md text-on-background selection:bg-primary selection:text-on-primary">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-background/70 backdrop-blur-[40px] border-b border-white/10 transition-all duration-500 ease-in-out hidden md:block">
+        <div class="flex justify-between items-center px-12 py-6 w-full max-w-none">
+            <a class="font-display-lg text-headline-md text-primary tracking-[0.2em] uppercase" href="#">MD.Shahed</a>
+            <div class="flex space-x-8 ml-auto">
+                <a class="text-primary border-b border-primary/50 pb-1 font-label-caps text-label-caps hover:text-primary transition-colors duration-700 ease-in-out uppercase"
+                    href="#">Home</a>
+                <a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-700 ease-in-out uppercase"
+                    href="#about">About me</a>
+                <a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-700 ease-in-out uppercase"
+                    href="#works">My content</a>
+                <a class="text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-700 ease-in-out uppercase"
+                    href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Mobile Nav (Simplified) -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-white/10 md:hidden flex justify-between items-center px-margin-mobile py-4">
+        <a class="font-display-lg text-headline-lg-mobile text-primary tracking-[0.1em] uppercase" href="#">AETERNA</a>
+        <button class="text-primary"><span class="material-symbols-outlined">menu</span></button>
+    </nav>
+    <!-- Hero Section -->
+    <header
+        class="relative min-h-screen w-full flex flex-col items-center justify-center pt-32 pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center"
+        id="home">
+        <!-- Grid background and floating social logos -->
+        <div class="absolute inset-0 hero-grid pointer-events-none z-0"></div>
+
+        <!-- Floating Logos Container -->
+        <div class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+            <!-- Facebook Logo (Left Upper) -->
+            <a href="#" target="_blank" rel="noopener noreferrer" id="hero-social-facebook"
+                class="absolute top-[20%] left-[8%] md:left-[15%] pointer-events-auto floating-logo-container animate-float-1 opacity-25 hover:text-[#1877F2] hover:drop-shadow-[0_0_15px_rgba(24,119,242,0.6)]">
+                <svg viewBox="0 0 24 24" class="w-10 h-10 md:w-12 md:h-12 transition-colors duration-300"
+                    fill="currentColor">
+                    <path
+                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+            </a>
+
+            <!-- LinkedIn Logo (Right Upper) -->
+            <a href="#" target="_blank" rel="noopener noreferrer" id="hero-social-linkedin"
+                class="absolute top-[22%] right-[8%] md:right-[15%] pointer-events-auto floating-logo-container animate-float-2 opacity-25 hover:text-[#0A66C2] hover:drop-shadow-[0_0_15px_rgba(10,102,194,0.6)]">
+                <svg viewBox="0 0 24 24" class="w-10 h-10 md:w-12 md:h-12 transition-colors duration-300"
+                    fill="currentColor">
+                    <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+            </a>
+
+            <!-- X / Twitter Logo (Left Middle) -->
+            <a href="#" target="_blank" rel="noopener noreferrer" id="hero-social-x"
+                class="absolute top-[48%] left-[5%] md:left-[10%] pointer-events-auto floating-logo-container animate-float-3 opacity-25 hover:text-white hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]">
+                <svg viewBox="0 0 24 24" class="w-10 h-10 md:w-12 md:h-12 transition-colors duration-300"
+                    fill="currentColor">
+                    <path
+                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+            </a>
+
+            <!-- Discord Logo (Right Middle) -->
+            <a href="#" target="_blank" rel="noopener noreferrer" id="hero-social-discord"
+                class="absolute top-[46%] right-[5%] md:right-[10%] pointer-events-auto floating-logo-container animate-float-4 opacity-25 hover:text-[#5865F2] hover:drop-shadow-[0_0_15px_rgba(88,101,242,0.6)]">
+                <svg viewBox="0 0 24 24" class="w-10 h-10 md:w-12 md:h-12 transition-colors duration-300"
+                    fill="currentColor">
+                    <path
+                        d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.094 13.094 0 0 1-1.873-.894.077.077 0 0 1-.008-.128c.126-.093.252-.19.372-.287a.075.075 0 0 1 .077-.011c3.92 1.793 8.18 1.793 12.061 0a.073.073 0 0 1 .078.009c.12.099.246.195.373.289a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.156 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.156 2.418z" />
+                </svg>
+            </a>
+
+            <!-- Telegram Logo (Left Lower) -->
+            <a href="#" target="_blank" rel="noopener noreferrer" id="hero-social-telegram"
+                class="absolute bottom-[20%] left-[8%] md:left-[15%] pointer-events-auto floating-logo-container animate-float-5 opacity-25 hover:text-[#24A1DE] hover:drop-shadow-[0_0_15px_rgba(36,161,222,0.6)]">
+                <svg viewBox="0 0 24 24" class="w-10 h-10 md:w-12 md:h-12 transition-colors duration-300"
+                    fill="currentColor">
+                    <path
+                        d="M11.944 0C5.344 0 0 5.344 0 12s5.344 12 12 12 12-5.344 12-12S18.544 0 11.944 0zm5.556 8.361l-1.894 8.928c-.144.639-.522.797-1.056.497l-2.883-2.122-1.392 1.339c-.153.153-.283.283-.583.283l.206-2.928 5.333-4.819c.231-.206-.05-.319-.358-.114l-6.594 4.147-2.839-.889c-.617-.194-.631-.617.131-.914l11.089-4.278c.514-.194.964.114.747.889z" />
+                </svg>
+            </a>
+
+            <!-- WhatsApp Logo (Right Lower) -->
+            <a href="#" target="_blank" rel="noopener noreferrer" id="hero-social-whatsapp"
+                class="absolute bottom-[22%] right-[8%] md:right-[15%] pointer-events-auto floating-logo-container animate-float-6 opacity-25 hover:text-[#25D366] hover:drop-shadow-[0_0_15px_rgba(37,211,102,0.6)]">
+                <svg viewBox="0 0 24 24" class="w-10 h-10 md:w-12 md:h-12 transition-colors duration-300"
+                    fill="currentColor">
+                    <path
+                        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.863-9.855.001-2.63-1.02-5.101-2.877-6.958C16.602 1.934 14.135.916 11.51.915c-5.44 0-9.863 4.418-9.866 9.852 0 1.637.43 3.235 1.243 4.646L1.879 20.14l4.768-1.251zM16.71 14.3c-.284-.143-1.682-.83-1.947-.926-.264-.097-.456-.144-.648.143-.19.288-.741.926-.909 1.116-.168.19-.336.213-.62.069-.282-.143-1.194-.44-2.274-1.402-.84-.75-1.408-1.677-1.573-1.963-.165-.285-.018-.439.124-.581.128-.127.284-.33.426-.496.143-.165.19-.283.285-.472.095-.188.047-.354-.024-.497-.071-.142-.648-1.562-.888-2.14-.233-.562-.47-.485-.648-.495-.167-.008-.36-.01-.552-.01-.192 0-.504.072-.768.36-.264.288-1.008.986-1.008 2.405 0 1.42 1.032 2.788 1.176 2.98.144.192 2.03 3.1 4.919 4.347.686.297 1.223.474 1.64.607.69.22 1.318.19 1.815.115.553-.083 1.682-.688 1.917-1.353.235-.665.235-1.233.165-1.353-.07-.12-.264-.192-.548-.335z" />
+                </svg>
+            </a>
+        </div>
+
+        <div class="flex flex-col items-center space-y-8 max-w-3xl z-10">
+            <!-- Image on top -->
+            <div
+                class="relative w-[260px] h-[350px] md:w-[300px] md:h-[400px] rounded-lg overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.6)] bg-surface-container transition-transform duration-700 hover:scale-[1.02]">
+                <img id="hero-portrait" alt="Md. Shahed Portrait"
+                    class="w-full h-full object-cover transition-all duration-1000 ease-in-out" src="profile.jpg">
+                <div class="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent"></div>
+            </div>
+
+            <!-- Text details below the image -->
+            <div class="space-y-6">
+                <h1 id="hero-title"
+                    class="font-display-lg text-headline-lg md:text-display-lg text-on-surface tracking-tight leading-tight">
+                    Welcome to my Portfolio</h1>
+            </div>
+        </div>
+        <div
+            class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center animate-pulse opacity-50 z-10">
+            <span class="font-label-caps text-label-caps text-on-surface-variant mb-2">SCROLL</span>
+            <div class="w-[1px] h-10 bg-on-surface-variant"></div>
+        </div>
+    </header>
+    <main>
+        <!-- About Section (Asymmetric Layout) -->
+        <section id="about"
+            class="py-32 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-t border-white/5">
+            <!-- Section Header -->
+            <div class="max-w-container-max mx-auto mb-16 border-b border-white/10 pb-8">
+                <h2 class="font-headline-lg text-headline-lg text-on-surface">About Me</h2>
+            </div>
+
+            <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+                <div class="col-span-1 md:col-span-5 relative">
+                    <div class="aspect-[3/4] overflow-hidden rounded-sm relative z-10">
+                        <img id="about-portrait" alt="Portrait"
+                            class="w-full h-full object-cover grayscale contrast-125" src="">
+                    </div>
+                    <!-- Decorative Element -->
+                    <div class="absolute -bottom-8 -right-8 w-64 h-64 border border-primary/30 z-0 hidden md:block">
+                    </div>
+                </div>
+                <div class="col-span-1 md:col-span-7 md:pl-12">
+                    <span class="font-label-caps text-label-caps text-primary tracking-[0.2em] uppercase mb-6 block">MD.
+                        SHAHED</span>
+                    <h2 id="about-title" class="font-headline-lg text-headline-lg text-on-surface mb-8">DIGITAL MARKETER
+                        & ONLINE PRODUCT SELLER</h2>
+                    <div id="about-bios" class="space-y-6 text-on-surface-variant font-body-lg text-body-lg mb-12">
+                        <!-- Dynamic bios go here -->
+                    </div>
+                    <div id="about-skills-tags" class="flex flex-wrap gap-4 mb-12">
+                        <!-- Dynamic skills tags go here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Works (Split Layout with Note Paper) -->
+        <section class="py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-t border-white/5"
+            id="works">
+            <div class="flex items-center justify-between mb-16 border-b border-white/10 pb-8">
+                <h2 class="font-headline-lg text-headline-lg text-on-surface">My Content</h2>
+                <button id="toggle-admin-btn" onclick="toggleAdminPanel()"
+                    class="w-12 h-12 rounded-full border border-white/10 hover:border-primary/50 text-on-surface-variant hover:text-primary flex items-center justify-center transition-all bg-transparent cursor-pointer"
+                    title="Content Administration Portal">
+                    <span class="material-symbols-outlined text-xl">settings</span>
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <!-- Left Column: Large Showcase Image -->
+                <div class="col-span-1 lg:col-span-7 relative group">
+                    <!-- Floating tape/frame details for luxury feel -->
+                    <div
+                        class="absolute -top-3 -left-3 w-12 h-12 border-t border-l border-primary/30 pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute -bottom-3 -right-3 w-12 h-12 border-b border-r border-primary/30 pointer-events-none">
+                    </div>
+
+                    <div
+                        class="relative aspect-[4/3] w-full rounded overflow-hidden border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.8)] bg-surface-container">
+                        <img id="showcase-image" alt="Content Visual"
+                            class="w-full h-full object-cover transition-all duration-700 hover:scale-[1.03] opacity-100"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvvqcmKkJL9BoZ2x8Gpe8qZMIXUVZOePd-hFL8my9KMy1oz1u8Yk_MpbIonWGi6fUp3KibFrpsBsaa5zT-Oqj_E52Y7zAj7Ns90r2b9vs3Ar1lNHDkF6KgUxPz0d1n6O5jXvXhOyy8RSJ1DY-FNYrWQvyUwYj2S4qwp7wFxIQWGcSKJs9I75FuYLkO1cR7KtqOiYX-B97D3325MmD7ybTL_g65RZWGBdv32Ww81pZwxBANx5b3HcdeCloGW0h0zyQRN-Alf2SSJMc">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent pointer-events-none">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Editorial Showcase Details -->
+                <div class="col-span-1 lg:col-span-5 flex flex-col justify-between h-full min-h-[300px] py-4">
+                    <div class="space-y-4">
+                        <!-- Category and Tag -->
+                        <div class="flex items-center space-x-3">
+                            <span id="showcase-category"
+                                class="font-label-caps text-label-caps text-primary tracking-[0.25em] uppercase">01 /
+                                Editorial</span>
+                            <span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+                            <span
+                                class="font-label-caps text-[10px] text-on-surface-variant tracking-wider uppercase font-bold">Showcase
+                                View</span>
+                        </div>
+
+                        <!-- Main Title -->
+                        <h3 id="showcase-title"
+                            class="font-display-lg text-headline-md md:text-headline-lg text-on-surface tracking-tight leading-tight transition-all duration-500">
+                            The Silence of Brutalism</h3>
+
+                        <!-- Divider -->
+                        <div class="w-16 h-[1px] bg-primary/40 my-4"></div>
+
+                        <!-- Description -->
+                        <p id="showcase-description"
+                            class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">A photographic
+                            exploration of concrete monoliths and their quiet presence in urban landscapes, capturing
+                            the raw textures and stark forms.</p>
+                    </div>
+
+                    <!-- Navigation & Index Counter -->
+                    <div class="flex items-center justify-between pt-8 border-t border-white/5 mt-8">
+                        <div class="flex items-center space-x-4">
+                            <!-- Prev Button -->
+                            <button onclick="prevShowcase()"
+                                class="w-12 h-12 rounded-full border border-white/10 hover:border-primary/50 text-on-surface hover:text-primary flex items-center justify-center transition-all bg-transparent cursor-pointer">
+                                <span class="material-symbols-outlined text-sm">arrow_back_ios_new</span>
+                            </button>
+                            <!-- Next Button -->
+                            <button onclick="nextShowcase(true)"
+                                class="w-12 h-12 rounded-full border border-white/10 hover:border-primary/50 text-on-surface hover:text-primary flex items-center justify-center transition-all bg-transparent cursor-pointer">
+                                <span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+                            </button>
+                        </div>
+                        <!-- Counter -->
+                        <span id="showcase-counter" class="font-sans font-bold text-sm tracking-widest text-primary">1 /
+                            3</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thumbnails Bar -->
+            <div class="mt-12 flex flex-col space-y-4">
+                <span
+                    class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest font-bold">Collection
+                    Index</span>
+                <div id="thumbnails-container" class="flex gap-4 overflow-x-auto pb-4 custom-scrollbar">
+                    <!-- Rendered dynamically -->
+                </div>
+            </div>
+
+            <!-- Admin Panel for Content Manager -->
+            <div class="mt-20 border-t border-white/5 pt-12">
+                <div id="admin-panel"
+                    class="hidden mt-8 max-w-4xl mx-auto bg-surface-container/20 p-8 rounded-xl border border-white/5 backdrop-blur-[20px] shadow-2xl relative transition-all duration-500">
+                    <!-- Lock screen -->
+                    <div id="admin-lock-screen" class="flex flex-col items-center justify-center py-8 space-y-6">
+                        <div
+                            class="w-16 h-16 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center text-primary animate-pulse">
+                            <span class="material-symbols-outlined text-3xl">lock</span>
+                        </div>
+                        <div class="text-center space-y-2">
+                            <h4 class="font-headline-md text-xl text-on-surface">Admin Access Verification</h4>
+                            <p class="text-sm text-on-surface-variant max-w-xs mx-auto">This control panel is locked.
+                                Enter password to upload and edit portfolio contents.</p>
+                        </div>
+                        <div class="w-full max-w-xs space-y-3">
+                            <input id="admin-password" type="password" onkeydown="handleAdminPasswordKey(event)"
+                                class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface text-center focus:outline-none focus:border-primary transition-all font-body-md shadow-inner tracking-widest"
+                                placeholder="••••••••">
+                            <button onclick="checkAdminPassword()"
+                                class="w-full py-3 bg-primary text-background font-label-caps text-label-caps tracking-widest uppercase hover:bg-white hover:text-black transition-colors rounded-sm font-bold shadow-lg flex items-center justify-center space-x-2 cursor-pointer">
+                                <span class="material-symbols-outlined text-sm">vpn_key</span>
+                                <span>Unlock Admin</span>
+                            </button>
+                            <p id="admin-lock-error"
+                                class="text-xs text-error font-bold text-center opacity-0 transition-opacity duration-300">
+                                Incorrect Password. Try again.</p>
+                        </div>
+                    </div>
+
+                    <!-- Unlocked Admin Controls -->
+                    <div id="admin-controls" class="hidden flex flex-col space-y-8">
+                        <!-- Tab Navigation -->
+                        <div class="flex border-b border-white/10 pb-4 space-x-6">
+                            <button id="tab-gallery" onclick="switchAdminTab('gallery')"
+                                class="px-4 py-2 text-primary border-b-2 border-primary font-label-caps text-xs tracking-widest uppercase transition-all bg-transparent cursor-pointer">
+                                Manage Gallery
+                            </button>
+                            <button id="tab-profile" onclick="switchAdminTab('profile')"
+                                class="px-4 py-2 text-on-surface-variant hover:text-primary font-label-caps text-xs tracking-widest uppercase transition-all bg-transparent cursor-pointer">
+                                Customize Profile & Links
+                            </button>
+                        </div>
+
+                        <!-- TAB 1: Gallery Management Form -->
+                        <div id="panel-gallery" class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                            <!-- Left Side: Form to add/edit content -->
+                            <div class="col-span-1 md:col-span-7 space-y-6">
+                                <h3 id="form-heading" class="font-headline-md text-xl text-primary">Add New Content</h3>
+
+                                <div>
+                                    <label
+                                        class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Project
+                                        Title</label>
+                                    <input id="admin-input-title" type="text"
+                                        class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                        placeholder="e.g. Modern Minimalist Interiors">
+                                </div>
+
+                                <div>
+                                    <label
+                                        class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Category
+                                        / Tag</label>
+                                    <input id="admin-input-category" type="text"
+                                        class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                        placeholder="e.g. 04 / Interior">
+                                </div>
+
+                                <div>
+                                    <label
+                                        class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Description</label>
+                                    <textarea id="admin-input-description"
+                                        class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md h-28 resize-none shadow-inner"
+                                        placeholder="Enter project description details..."></textarea>
+                                </div>
+
+                                <div>
+                                    <label
+                                        class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Project
+                                        Image</label>
+                                    <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                                        <input id="admin-input-image" type="file" accept="image/*"
+                                            onchange="handleAdminImageUpload(event)" class="hidden">
+                                        <button onclick="document.getElementById('admin-input-image').click()"
+                                            class="px-5 py-3 bg-surface-container-high border border-white/10 hover:border-primary/50 hover:text-primary text-on-surface font-label-caps text-xs tracking-wider uppercase rounded-sm flex items-center space-x-2 transition-all shadow-md cursor-pointer">
+                                            <span class="material-symbols-outlined text-sm">photo_camera</span>
+                                            <span>Upload Image File</span>
+                                        </button>
+                                        <span
+                                            class="text-xs text-on-surface-variant font-bold uppercase self-center">or</span>
+                                        <input id="admin-input-image-url" type="text"
+                                            oninput="updateAdminImagePreviewFromUrl()"
+                                            class="flex-1 w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-sm text-on-surface focus:outline-none focus:border-primary transition-all shadow-inner"
+                                            placeholder="Paste image web link (URL)...">
+                                    </div>
+
+                                    <!-- Image Preview Box -->
+                                    <div class="mt-4 flex items-center space-x-4">
+                                        <span
+                                            class="text-xs text-on-surface-variant font-bold uppercase">Preview:</span>
+                                        <div
+                                            class="w-24 h-16 rounded overflow-hidden border border-white/10 bg-surface-container-high flex items-center justify-center">
+                                            <img id="form-image-preview" src=""
+                                                class="w-full h-full object-cover hidden">
+                                            <span id="form-image-placeholder"
+                                                class="material-symbols-outlined text-on-surface-variant">image</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center space-x-4 pt-4 border-t border-white/5">
+                                    <button onclick="saveAdminContent()"
+                                        class="px-6 py-3.5 bg-primary text-background font-label-caps text-label-caps tracking-widest uppercase hover:bg-white hover:text-black transition-colors rounded-sm flex items-center space-x-2 font-bold shadow-lg cursor-pointer">
+                                        <span class="material-symbols-outlined text-sm">save</span>
+                                        <span id="submit-btn-text">Add Content</span>
+                                    </button>
+                                    <button id="cancel-edit-btn" onclick="cancelEdit()"
+                                        class="hidden px-4 py-3 border border-white/10 hover:border-white/30 text-on-surface-variant hover:text-on-surface font-label-caps text-xs tracking-widest uppercase rounded-sm transition-all bg-transparent cursor-pointer">
+                                        Cancel
+                                    </button>
+                                    <p id="admin-save-toast"
+                                        class="text-xs text-primary font-bold italic opacity-0 transition-opacity duration-300">
+                                        Content updated successfully!</p>
+                                </div>
+                            </div>
+
+                            <!-- Right Side: Existing Items Management -->
+                            <div
+                                class="col-span-1 md:col-span-5 flex flex-col h-full border-t md:border-t-0 md:border-l border-white/5 pt-8 md:pt-0 md:pl-8">
+                                <div class="flex justify-between items-center mb-6">
+                                    <h3 class="font-headline-md text-xl text-on-surface">Manage Gallery</h3>
+                                    <button onclick="lockAdminPanel()"
+                                        class="px-3 py-1.5 border border-white/10 hover:border-error/30 hover:text-error text-on-surface-variant hover:text-on-surface font-label-caps text-[10px] tracking-widest uppercase rounded-sm transition-all flex items-center space-x-1 bg-transparent cursor-pointer">
+                                        <span class="material-symbols-outlined text-xs">lock</span>
+                                        <span>Lock Panel</span>
+                                    </button>
+                                </div>
+
+                                <!-- Scrollable List of Contents -->
+                                <div id="admin-contents-list"
+                                    class="space-y-4 max-h-[380px] overflow-y-auto pr-2 custom-scrollbar">
+                                    <!-- Dynamic items go here -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TAB 2: Customize About Me Form -->
+                        <div id="panel-profile" class="hidden grid grid-cols-1 md:grid-cols-12 gap-8">
+                            <!-- Left Side: Customization Form -->
+                            <div class="col-span-1 md:col-span-7 space-y-6">
+                                <h3 class="font-headline-md text-xl text-primary">Customize Profile & Contact Links</h3>
+
+                                <div>
+                                    <label
+                                        class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Hero
+                                        Title (Welcome Header)</label>
+                                    <input id="profile-input-hero-title" type="text"
+                                        class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                        placeholder="Welcome Title">
+                                </div>
+
+                                <!-- Hero Title Styling Controls -->
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label
+                                            class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Hero
+                                            Title Color</label>
+                                        <div
+                                            class="flex items-center space-x-3 bg-surface-container-high border border-white/10 rounded px-4 py-2">
+                                            <input id="profile-input-hero-color" type="color"
+                                                oninput="document.getElementById('profile-hero-color-text').innerText = this.value"
+                                                class="w-10 h-10 border-0 bg-transparent cursor-pointer rounded focus:outline-none"
+                                                title="Choose color">
+                                            <span id="profile-hero-color-text"
+                                                class="text-xs text-on-surface-variant uppercase font-bold tracking-wider">#e5e2e1</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label
+                                            class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Hero
+                                            Title Font</label>
+                                        <select id="profile-input-hero-font"
+                                            class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3.5 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner cursor-pointer">
+                                            <option value="Playfair Display">Playfair Display (Elegant Serif)</option>
+                                            <option value="DM Sans">DM Sans (Clean Sans-Serif)</option>
+                                            <option value="Caveat">Caveat (Creative Handwritten)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label
+                                        class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">About
+                                        Section Heading</label>
+                                    <input id="profile-input-about-title" type="text"
+                                        class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                        placeholder="About Heading">
+                                </div>
+
+                                <div>
+                                    <label
+                                        class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Bio
+                                        Paragraph 1</label>
+                                    <textarea id="profile-input-bio1"
+                                        class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md h-24 resize-none shadow-inner"
+                                        placeholder="First paragraph..."></textarea>
+                                </div>
+
+                                <div>
+                                    <label
+                                        class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Bio
+                                        Paragraph 2</label>
+                                    <textarea id="profile-input-bio2"
+                                        class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md h-24 resize-none shadow-inner"
+                                        placeholder="Second paragraph..."></textarea>
+                                </div>
+
+                                <div>
+                                    <label
+                                        class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Skills
+                                        / Tags (separated by commas)</label>
+                                    <input id="profile-input-skills" type="text"
+                                        class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                        placeholder="e.g. Digital Marketing, E-commerce, conversion Rate Optimization">
+                                </div>
+
+                                <!-- Social & Contact Links Customization Grid -->
+                                <div class="pt-6 border-t border-white/5 space-y-4">
+                                    <h4 class="font-headline-md text-lg text-primary tracking-wider">Social & Contact
+                                        Links</h4>
+
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <div>
+                                            <label
+                                                class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Facebook
+                                                Link</label>
+                                            <input id="profile-input-facebook" type="url"
+                                                class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                                placeholder="https://www.facebook.com/...">
+                                        </div>
+                                        <div>
+                                            <label
+                                                class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">LinkedIn
+                                                Link</label>
+                                            <input id="profile-input-linkedin" type="url"
+                                                class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                                placeholder="https://www.linkedin.com/in/...">
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <div>
+                                            <label
+                                                class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">X
+                                                (Twitter) Link</label>
+                                            <input id="profile-input-x" type="url"
+                                                class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                                placeholder="https://x.com/...">
+                                        </div>
+                                        <div>
+                                            <label
+                                                class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Discord
+                                                Link</label>
+                                            <input id="profile-input-discord" type="url"
+                                                class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                                placeholder="https://discord.gg/...">
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <div>
+                                            <label
+                                                class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Telegram
+                                                Link</label>
+                                            <input id="profile-input-telegram" type="url"
+                                                class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                                placeholder="https://t.me/...">
+                                        </div>
+                                        <div>
+                                            <label
+                                                class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">WhatsApp
+                                                Link</label>
+                                            <input id="profile-input-whatsapp" type="url"
+                                                class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                                placeholder="https://wa.me/...">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center space-x-4 pt-4 border-t border-white/5">
+                                    <button onclick="saveAdminProfile()"
+                                        class="px-6 py-3.5 bg-primary text-background font-label-caps text-label-caps tracking-widest uppercase hover:bg-white hover:text-black transition-colors rounded-sm flex items-center space-x-2 font-bold shadow-lg cursor-pointer">
+                                        <span class="material-symbols-outlined text-sm">save</span>
+                                        <span>Save Profile Details</span>
+                                    </button>
+                                    <p id="profile-save-toast"
+                                        class="text-xs text-primary font-bold italic opacity-0 transition-opacity duration-300">
+                                        Profile saved successfully!</p>
+                                </div>
+                            </div>
+
+                            <!-- Right Side: Profile Photos Customizer -->
+                            <div
+                                class="col-span-1 md:col-span-5 space-y-6 border-t md:border-t-0 md:border-l border-white/5 pt-8 md:pt-0 md:pl-8">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="font-headline-md text-xl text-on-surface">Profile Images</h3>
+                                    <button onclick="lockAdminPanel()"
+                                        class="px-3 py-1.5 border border-white/10 hover:border-error/30 hover:text-error text-on-surface-variant hover:text-on-surface font-label-caps text-[10px] tracking-widest uppercase rounded-sm transition-all flex items-center space-x-1 bg-transparent cursor-pointer">
+                                        <span class="material-symbols-outlined text-xs">lock</span>
+                                        <span>Lock Panel</span>
+                                    </button>
+                                </div>
+
+                                <div class="space-y-6">
+                                    <!-- Hero Portrait Upload / Paste Link -->
+                                    <div
+                                        class="p-4 bg-surface-container-high/20 rounded border border-white/5 space-y-4">
+                                        <label
+                                            class="block font-label-caps text-[10px] text-primary uppercase tracking-widest font-bold">Hero
+                                            Portrait</label>
+                                        <div class="flex flex-col gap-3">
+                                            <input id="profile-input-hero-image" type="file" accept="image/*"
+                                                onchange="handleHeroImageUpload(event)" class="hidden">
+                                            <button
+                                                onclick="document.getElementById('profile-input-hero-image').click()"
+                                                class="w-full px-4 py-2.5 bg-surface-container-high border border-white/10 hover:border-primary/50 hover:text-primary text-on-surface font-label-caps text-xs tracking-wider uppercase rounded-sm flex items-center justify-center space-x-2 transition-all shadow-md cursor-pointer">
+                                                <span class="material-symbols-outlined text-sm">photo_camera</span>
+                                                <span>Upload Hero Photo</span>
+                                            </button>
+                                            <span
+                                                class="text-[10px] text-on-surface-variant font-bold uppercase text-center">or</span>
+                                            <input id="profile-input-hero-image-url" type="text"
+                                                oninput="updateHeroImagePreviewFromUrl()"
+                                                class="w-full bg-surface-container-high border border-white/10 rounded px-3 py-2.5 text-xs text-on-surface focus:outline-none focus:border-primary transition-all shadow-inner"
+                                                placeholder="Paste Hero image URL...">
+                                        </div>
+                                    </div>
+
+                                    <!-- About Portrait Upload / Paste Link -->
+                                    <div
+                                        class="p-4 bg-surface-container-high/20 rounded border border-white/5 space-y-4">
+                                        <label
+                                            class="block font-label-caps text-[10px] text-primary uppercase tracking-widest font-bold">About
+                                            Portrait</label>
+                                        <div class="flex flex-col gap-3">
+                                            <input id="profile-input-about-image" type="file" accept="image/*"
+                                                onchange="handleAboutImageUpload(event)" class="hidden">
+                                            <button
+                                                onclick="document.getElementById('profile-input-about-image').click()"
+                                                class="w-full px-4 py-2.5 bg-surface-container-high border border-white/10 hover:border-primary/50 hover:text-primary text-on-surface font-label-caps text-xs tracking-wider uppercase rounded-sm flex items-center justify-center space-x-2 transition-all shadow-md cursor-pointer">
+                                                <span class="material-symbols-outlined text-sm">photo_camera</span>
+                                                <span>Upload About Photo</span>
+                                            </button>
+                                            <span
+                                                class="text-[10px] text-on-surface-variant font-bold uppercase text-center">or</span>
+                                            <input id="profile-input-about-image-url" type="text"
+                                                oninput="updateAboutImagePreviewFromUrl()"
+                                                class="w-full bg-surface-container-high border border-white/10 rounded px-3 py-2.5 text-xs text-on-surface focus:outline-none focus:border-primary transition-all shadow-inner"
+                                                placeholder="Paste About image URL...">
+                                        </div>
+                                    </div>
+
+                                    <!-- Image Preview Boxes -->
+                                    <div class="space-y-4">
+                                        <span class="text-xs text-on-surface-variant font-bold uppercase block">Active
+                                            Portraits Preview:</span>
+                                        <div class="grid grid-cols-2 gap-4">
+                                            <div class="flex flex-col items-center space-y-2">
+                                                <span
+                                                    class="text-[9px] text-on-surface-variant uppercase font-bold tracking-widest">Hero
+                                                    Portrait</span>
+                                                <div
+                                                    class="aspect-[3/4] w-full rounded overflow-hidden border border-white/10 bg-surface-container-high flex items-center justify-center">
+                                                    <img id="profile-hero-preview" src=""
+                                                        class="w-full h-full object-cover">
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-col items-center space-y-2">
+                                                <span
+                                                    class="text-[9px] text-on-surface-variant uppercase font-bold tracking-widest">About
+                                                    Portrait</span>
+                                                <div
+                                                    class="aspect-[3/4] w-full rounded overflow-hidden border border-white/10 bg-surface-container-high flex items-center justify-center">
+                                                    <img id="profile-about-preview" src=""
+                                                        class="w-full h-full object-cover filter grayscale contrast-125">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact"
+            class="py-32 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-t border-white/5">
+            <!-- Section Header -->
+            <div class="max-w-container-max mx-auto mb-16 border-b border-white/10 pb-8">
+                <h2 class="font-headline-lg text-headline-lg text-on-surface">Contact</h2>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                <!-- Left Column: Contact Channels & Info -->
+                <div class="col-span-1 lg:col-span-5 space-y-8">
+                    <div class="space-y-4">
+                        <span class="font-label-caps text-label-caps text-primary tracking-[0.25em] uppercase">Get In
+                            Touch</span>
+                        <h3 class="font-headline-lg text-3xl md:text-4xl text-on-surface leading-tight">Let's craft
+                            something exceptional together.</h3>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            Whether you want to scale your brand, inquire about online products, discuss digital
+                            marketing funnels, or explore a creative collaboration, drop a message.
+                        </p>
+                    </div>
+
+                    <!-- Contact Details -->
+                    <div class="space-y-6 pt-6">
+                        <!-- Email Link -->
+                        <a href="mailto:shahedtnvr15@gmail.com"
+                            class="flex items-center space-x-4 group bg-surface-container/20 p-4 rounded border border-white/5 hover:border-primary/30 transition-all">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background transition-all duration-500">
+                                <span class="material-symbols-outlined text-lg">mail</span>
+                            </div>
+                            <div>
+                                <span
+                                    class="block font-label-caps text-[9px] text-on-surface-variant uppercase tracking-widest font-bold">Email
+                                    Address</span>
+                                <span
+                                    class="text-sm font-body-md text-on-surface group-hover:text-primary transition-colors">shahedtnvr15@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <!-- WhatsApp/Phone Link -->
+                        <a id="contact-whatsapp-link" href="https://wa.me/qr/VLOX4EFRBAFGI1" target="_blank"
+                            class="flex items-center space-x-4 group bg-surface-container/20 p-4 rounded border border-white/5 hover:border-primary/30 transition-all">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background transition-all duration-500">
+                                <span class="material-symbols-outlined text-lg">call</span>
+                            </div>
+                            <div>
+                                <span
+                                    class="block font-label-caps text-[9px] text-on-surface-variant uppercase tracking-widest font-bold">WhatsApp
+                                    / Mobile</span>
+                                <span
+                                    class="text-sm font-body-md text-on-surface group-hover:text-primary transition-colors">+880
+                                    1839079238</span>
+                            </div>
+                        </a>
+
+                        <!-- Location -->
+                        <div
+                            class="flex items-center space-x-4 bg-surface-container/20 p-4 rounded border border-white/5">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined text-lg">location_on</span>
+                            </div>
+                            <div>
+                                <span
+                                    class="block font-label-caps text-[9px] text-on-surface-variant uppercase tracking-widest font-bold">Based
+                                    In</span>
+                                <span class="text-sm font-body-md text-on-surface">Dhaka, Bangladesh</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Premium Contact Form -->
+                <div class="col-span-1 lg:col-span-7">
+                    <form onsubmit="handleContactSubmit(event)"
+                        class="bg-surface-container/20 border border-white/5 p-8 md:p-10 rounded-xl backdrop-blur-[20px] shadow-2xl space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label
+                                    class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Your
+                                    Name</label>
+                                <input id="contact-name" type="text" required
+                                    class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                    placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label
+                                    class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Your
+                                    Email</label>
+                                <input id="contact-email" type="email" required
+                                    class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                    placeholder="johndoe@example.com">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label
+                                class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Subject</label>
+                            <input id="contact-subject" type="text" required
+                                class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                placeholder="Inquiry about Product / Campaign">
+                        </div>
+
+                        <div>
+                            <label
+                                class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Message</label>
+                            <textarea id="contact-message" required
+                                class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md h-36 resize-none shadow-inner"
+                                placeholder="Describe your project, ideas or inquiry details here..."></textarea>
+                        </div>
+
+                        <div class="flex items-center space-x-4 pt-4">
+                            <button type="submit"
+                                class="px-8 py-4 bg-primary text-background font-label-caps text-label-caps tracking-widest uppercase hover:bg-white hover:text-black transition-colors rounded-sm flex items-center space-x-2 font-bold shadow-lg cursor-pointer">
+                                <span class="material-symbols-outlined text-sm">send</span>
+                                <span>Send Message</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-24 bg-surface-container-lowest border-t border-white/5">
+        <div class="px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto space-y-16">
+            <!-- 3-Column Luxury Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+                <!-- Left: Branding & Copyright -->
+                <div class="col-span-1 md:col-span-5 space-y-6">
+                    <div class="font-display-lg text-4xl text-primary tracking-[0.2em] uppercase">MD. Shahed</div>
+                    <p class="text-sm font-body-md text-on-surface-variant leading-relaxed max-w-sm">
+                        Digital marketer and online product seller dedicated to crafting strategic digital solutions and
+                        seamless e-commerce growth.
+                    </p>
+                    <span
+                        class="block font-label-caps text-[10px] text-on-surface-variant/60 uppercase tracking-widest leading-relaxed">
+                        © 2026 MD. Shahed. Crafted for the discerning.
+                    </span>
+                </div>
+
+                <!-- Center: Explore Menu -->
+                <div class="col-span-1 md:col-span-4 space-y-6">
+                    <h4 class="font-headline-lg text-2xl text-primary tracking-[0.2em] uppercase">Explore</h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#home"
+                                class="font-label-caps text-xs text-on-surface-variant hover:text-primary tracking-widest uppercase transition-all duration-300 hover:pl-2 inline-block">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about"
+                                class="font-label-caps text-xs text-on-surface-variant hover:text-primary tracking-widest uppercase transition-all duration-300 hover:pl-2 inline-block">
+                                About Me
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#works"
+                                class="font-label-caps text-xs text-on-surface-variant hover:text-primary tracking-widest uppercase transition-all duration-300 hover:pl-2 inline-block">
+                                My Content
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact"
+                                class="font-label-caps text-xs text-on-surface-variant hover:text-primary tracking-widest uppercase transition-all duration-300 hover:pl-2 inline-block">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right: Social Channels -->
+                <div class="col-span-1 md:col-span-3 space-y-6">
+                    <h4 class="font-headline-lg text-2xl text-primary tracking-[0.2em] uppercase">Contact</h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <a id="footer-social-facebook" href="#" target="_blank" rel="noopener noreferrer"
+                                class="font-label-caps text-xs text-on-surface-variant hover:text-primary tracking-widest uppercase transition-all duration-300 hover:pl-2 inline-block">
+                                Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a id="footer-social-linkedin" href="#" target="_blank" rel="noopener noreferrer"
+                                class="font-label-caps text-xs text-on-surface-variant hover:text-primary tracking-widest uppercase transition-all duration-300 hover:pl-2 inline-block">
+                                LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a id="footer-social-x" href="#" target="_blank" rel="noopener noreferrer"
+                                class="font-label-caps text-xs text-on-surface-variant hover:text-primary tracking-widest uppercase transition-all duration-300 hover:pl-2 inline-block">
+                                X
+                            </a>
+                        </li>
+                        <li>
+                            <a id="footer-social-discord" href="#" target="_blank" rel="noopener noreferrer"
+                                class="font-label-caps text-xs text-on-surface-variant hover:text-primary tracking-widest uppercase transition-all duration-300 hover:pl-2 inline-block">
+                                Discord
+                            </a>
+                        </li>
+                        <li>
+                            <a id="footer-social-telegram" href="#" target="_blank" rel="noopener noreferrer"
+                                class="font-label-caps text-xs text-on-surface-variant hover:text-primary tracking-widest uppercase transition-all duration-300 hover:pl-2 inline-block">
+                                Telegram
+                            </a>
+                        </li>
+                        <li>
+                            <a id="footer-social-whatsapp" href="#" target="_blank" rel="noopener noreferrer"
+                                class="font-label-caps text-xs text-on-surface-variant hover:text-primary tracking-widest uppercase transition-all duration-300 hover:pl-2 inline-block">
+                                WhatsApp
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Reading Progress Indicator (Fixed Top) -->
+    <div class="fixed top-0 left-0 w-full h-[1px] z-[60] bg-white/5">
+        <div class="h-full bg-primary w-0 transition-all duration-300" id="progress-bar"></div>
+    </div>
+    <script>
+        // Simple reading progress bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progress-bar').style.width = scrolled + '%';
+        });
+
+        // Default portfolio contents
+        const DEFAULT_CONTENTS = [
+            {
+                id: 'default-1',
+                title: "The Silence of Brutalism",
+                category: "01 / Editorial",
+                description: "A photographic exploration of concrete monoliths and their quiet presence in urban landscapes, capturing the raw textures and stark forms.",
+                imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuDvvqcmKkJL9BoZ2x8Gpe8qZMIXUVZOePd-hFL8my9KMy1oz1u8Yk_MpbIonWGi6fUp3KibFrpsBsaa5zT-Oqj_E52Y7zAj7Ns90r2b9vs3Ar1lNHDkF6KgUxPz0d1n6O5jXvXhOyy8RSJ1DY-FNYrWQvyUwYj2S4qwp7wFxIQWGcSKJs9I75FuYLkO1cR7KtqOiYX-B97D3325MmD7ybTL_g65RZWGBdv32Ww81pZwxBANx5b3HcdeCloGW0h0zyQRN-Alf2SSJMc"
+            },
+            {
+                id: 'default-2',
+                title: "Ethereal Solitude",
+                category: "02 / Conceptual",
+                description: "A study on minimal space, isolation, and natural light casting soft shadows on clean walls, evoking deep contemplation.",
+                imageUrl: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?auto=format&fit=crop&w=1200&q=80"
+            },
+            {
+                id: 'default-3',
+                title: "Geometric Symphony",
+                category: "03 / Architecture",
+                description: "Focusing on sharp architectural lines and contrasting shadows, this project highlights modern structures in abstract forms.",
+                imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+            }
+        ];
+
+        const DEFAULT_PROFILE = {
+            heroTitle: "Welcome to my Portfolio",
+            aboutTitle: "DIGITAL MARKETER & ONLINE PRODUCT SELLER",
+            bio1: "Md. Shahed is a results-driven digital marketer and online product seller dedicated to transforming concepts into profitable digital businesses. Combining data-backed strategies with compelling visual storytelling, he builds high-converting campaigns and seamless online shopping experiences.",
+            bio2: "Working with modern e-commerce tools and marketing funnels, Shahed focuses on scaling brands, optimizing product visibility, and turning target audiences into loyal customers. Every campaign and store layout is meticulously crafted to deliver measurable growth and a premium brand presence.",
+            skills: "Digital Marketing, E-commerce, Conversion Rate Optimization, Funnel Building, Brand Strategy",
+            heroImageUrl: "profile.jpg",
+            aboutImageUrl: "profile.jpg",
+            heroTitleColor: "#e5e2e1",
+            heroTitleFont: "Playfair Display",
+            facebookLink: "https://www.facebook.com/share/1BikVQhiuC/",
+            linkedinLink: "https://www.linkedin.com/in/shahed-hasan-tanvir-a1750a26b/",
+            xLink: "https://x.com/mdshahedtnvr69",
+            discordLink: "https://discord.gg/9GbXqXCZ",
+            telegramLink: "https://t.me/shahedtnvr15",
+            whatsappLink: "https://wa.me/qr/VLOX4EFRBAFGI1"
+        };
+
+        let portfolioContents = [];
+        let currentIndex = 0;
+        let editModeItemId = null;
+        let uploadedImageBase64 = null;
+        let profileData = {};
+        let uploadedHeroImageBase64 = null;
+        let uploadedAboutImageBase64 = null;
+
+        // Autoplay settings
+        let showcaseInterval = null;
+        const SHOWCASE_AUTOPLAY_DELAY = 4000; // change slide every 4 seconds
+
+        // Initialize state
+        function initPortfolio() {
+            const saved = localStorage.getItem('my_portfolio_contents');
+            if (saved) {
+                portfolioContents = JSON.parse(saved);
+            } else {
+                portfolioContents = [...DEFAULT_CONTENTS];
+                localStorage.setItem('my_portfolio_contents', JSON.stringify(portfolioContents));
+            }
+            renderShowcase();
+
+            const savedProfile = localStorage.getItem('my_portfolio_profile');
+            if (savedProfile) {
+                profileData = JSON.parse(savedProfile);
+                // Force update if it's the old default template
+                if (profileData.aboutTitle === "Crafting digital experiences with profound depth." || !profileData.aboutTitle) {
+                    profileData = { ...DEFAULT_PROFILE };
+                    localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
+                } else {
+                    // Upgrade older schema automatically
+                    let upgraded = false;
+                    if (profileData.imageUrl && !profileData.heroImageUrl) {
+                        profileData.heroImageUrl = profileData.imageUrl;
+                        upgraded = true;
+                    }
+                    if (profileData.imageUrl && !profileData.aboutImageUrl) {
+                        profileData.aboutImageUrl = profileData.imageUrl;
+                        upgraded = true;
+                    }
+                    if (!profileData.heroImageUrl) {
+                        profileData.heroImageUrl = "profile.jpg";
+                        upgraded = true;
+                    }
+                    if (!profileData.aboutImageUrl) {
+                        profileData.aboutImageUrl = "profile.jpg";
+                        upgraded = true;
+                    }
+                    if (!profileData.heroTitleColor) {
+                        profileData.heroTitleColor = "#e5e2e1";
+                        upgraded = true;
+                    }
+                    if (!profileData.heroTitleFont) {
+                        profileData.heroTitleFont = "Playfair Display";
+                        upgraded = true;
+                    }
+                    if (!profileData.facebookLink) {
+                        profileData.facebookLink = DEFAULT_PROFILE.facebookLink;
+                        upgraded = true;
+                    }
+                    if (!profileData.linkedinLink) {
+                        profileData.linkedinLink = DEFAULT_PROFILE.linkedinLink;
+                        upgraded = true;
+                    }
+                    if (!profileData.xLink) {
+                        profileData.xLink = DEFAULT_PROFILE.xLink;
+                        upgraded = true;
+                    }
+                    if (!profileData.discordLink) {
+                        profileData.discordLink = DEFAULT_PROFILE.discordLink;
+                        upgraded = true;
+                    }
+                    if (!profileData.telegramLink) {
+                        profileData.telegramLink = DEFAULT_PROFILE.telegramLink;
+                        upgraded = true;
+                    }
+                    if (!profileData.whatsappLink) {
+                        profileData.whatsappLink = DEFAULT_PROFILE.whatsappLink;
+                        upgraded = true;
+                    }
+                    if (upgraded) {
+                        localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
+                    }
+                }
+            } else {
+                profileData = { ...DEFAULT_PROFILE };
+                localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
+            }
+            renderProfile();
+            startShowcaseAutoplay();
+        }
+
+        // Render Showcase (Active image & details)
+        function renderShowcase() {
+            const showcaseImg = document.getElementById('showcase-image');
+            const titleEl = document.getElementById('showcase-title');
+            const catEl = document.getElementById('showcase-category');
+            const descEl = document.getElementById('showcase-description');
+            const counterEl = document.getElementById('showcase-counter');
+
+            if (!showcaseImg) return;
+
+            if (portfolioContents.length === 0) {
+                showcaseImg.src = '';
+                showcaseImg.classList.add('hidden');
+                titleEl.innerText = "No Content Uploaded";
+                catEl.innerText = "Empty Gallery";
+                descEl.innerText = "Click the Content Administration Portal below and enter password to upload your masterpieces.";
+                counterEl.innerText = "0 / 0";
+                renderThumbnails();
+                return;
+            }
+
+            showcaseImg.classList.remove('hidden');
+
+            if (currentIndex >= portfolioContents.length) {
+                currentIndex = portfolioContents.length - 1;
+            }
+            if (currentIndex < 0) {
+                currentIndex = 0;
+            }
+
+            const item = portfolioContents[currentIndex];
+
+            // Smooth transition effect
+            showcaseImg.style.opacity = '0';
+            setTimeout(() => {
+                showcaseImg.src = item.imageUrl;
+                titleEl.innerText = item.title;
+                catEl.innerText = item.category;
+                descEl.innerText = item.description;
+                counterEl.innerText = `${currentIndex + 1} / ${portfolioContents.length}`;
+                showcaseImg.style.opacity = '1';
+            }, 200);
+
+            renderThumbnails();
+        }
+
+        // Render Thumbnail items below showcase
+        function renderThumbnails() {
+            const container = document.getElementById('thumbnails-container');
+            if (!container) return;
+
+            container.innerHTML = '';
+
+            portfolioContents.forEach((item, index) => {
+                const isActive = index === currentIndex;
+                const activeClasses = isActive
+                    ? 'border-primary scale-105 opacity-100 shadow-[0_4px_12px_rgba(233,193,118,0.2)]'
+                    : 'border-white/10 opacity-50 hover:opacity-90 hover:scale-102';
+
+                container.innerHTML += `
+                    <button onclick="selectShowcase(${index})" class="relative flex-shrink-0 w-24 h-24 rounded overflow-hidden border-2 transition-all duration-300 bg-surface-container ${activeClasses} cursor-pointer">
+                        <img src="${item.imageUrl}" class="w-full h-full object-cover" alt="${item.title}">
+                        <div class="absolute inset-0 bg-black/15 hover:bg-transparent transition-colors"></div>
+                    </button>
+                `;
+            });
+        }
+
+        // Autoplay helper functions
+        function startShowcaseAutoplay() {
+            stopShowcaseAutoplay();
+            if (portfolioContents.length > 1) {
+                showcaseInterval = setInterval(() => {
+                    nextShowcase(false);
+                }, SHOWCASE_AUTOPLAY_DELAY);
+            }
+        }
+
+        function stopShowcaseAutoplay() {
+            if (showcaseInterval) {
+                clearInterval(showcaseInterval);
+                showcaseInterval = null;
+            }
+        }
+
+        function selectShowcase(index) {
+            currentIndex = index;
+            renderShowcase();
+            startShowcaseAutoplay(); // Reset autoplay timer on manual select
+        }
+
+        function nextShowcase(isManual = true) {
+            if (portfolioContents.length === 0) return;
+            currentIndex = (currentIndex + 1) % portfolioContents.length;
+            renderShowcase();
+            if (isManual) {
+                startShowcaseAutoplay(); // Reset autoplay timer on manual click
+            }
+        }
+
+        function prevShowcase() {
+            if (portfolioContents.length === 0) return;
+            currentIndex = (currentIndex - 1 + portfolioContents.length) % portfolioContents.length;
+            renderShowcase();
+            startShowcaseAutoplay(); // Reset autoplay timer on manual click
+        }
+
+        // Admin Panel Controls
+        function toggleAdminPanel() {
+            const panel = document.getElementById('admin-panel');
+            panel.classList.toggle('hidden');
+            if (!panel.classList.contains('hidden')) {
+                // Focus password input if lock screen is visible
+                const passInput = document.getElementById('admin-password');
+                if (passInput) passInput.focus();
+                stopShowcaseAutoplay(); // Stop slideshow when admin panel is open
+            } else {
+                startShowcaseAutoplay(); // Resume slideshow when admin panel is closed
+            }
+        }
+
+        // Lock & Password Screen Logic
+        function checkAdminPassword() {
+            const passInput = document.getElementById('admin-password');
+            const errorMsg = document.getElementById('admin-lock-error');
+
+            if (passInput.value === 'shahedtnvr15') {
+                document.getElementById('admin-lock-screen').classList.add('hidden');
+                document.getElementById('admin-controls').classList.remove('hidden');
+                passInput.value = '';
+                errorMsg.style.opacity = '0';
+                renderAdminList();
+            } else {
+                errorMsg.style.opacity = '1';
+                passInput.classList.add('border-error');
+                passInput.style.transform = 'translateX(-5px)';
+                setTimeout(() => passInput.style.transform = 'translateX(5px)', 100);
+                setTimeout(() => passInput.style.transform = 'translateX(-5px)', 200);
+                setTimeout(() => {
+                    passInput.style.transform = 'none';
+                    passInput.classList.remove('border-error');
+                }, 300);
+            }
+        }
+
+        function handleAdminPasswordKey(event) {
+            if (event.key === 'Enter') {
+                checkAdminPassword();
+            }
+        }
+
+        function lockAdminPanel() {
+            document.getElementById('admin-lock-screen').classList.remove('hidden');
+            document.getElementById('admin-controls').classList.add('hidden');
+            document.getElementById('admin-password').value = '';
+            cancelEdit();
+            stopShowcaseAutoplay(); // Keep slideshow stopped since admin panel is still visible
+        }
+
+        // Form Image Preview updates
+        function updateAdminImagePreviewFromUrl() {
+            const url = document.getElementById('admin-input-image-url').value.trim();
+            const previewImg = document.getElementById('form-image-preview');
+            const placeholder = document.getElementById('form-image-placeholder');
+
+            if (url) {
+                previewImg.src = url;
+                previewImg.classList.remove('hidden');
+                placeholder.classList.add('hidden');
+                uploadedImageBase64 = null; // Clear base64 if url used
+            } else {
+                previewImg.src = '';
+                previewImg.classList.add('hidden');
+                placeholder.classList.remove('hidden');
+            }
+        }
+
+        function handleAdminImageUpload(event) {
+            const file = event.target.files[0];
+            const previewImg = document.getElementById('form-image-preview');
+            const placeholder = document.getElementById('form-image-placeholder');
+            const urlInput = document.getElementById('admin-input-image-url');
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    uploadedImageBase64 = e.target.result;
+                    previewImg.src = uploadedImageBase64;
+                    previewImg.classList.remove('hidden');
+                    placeholder.classList.add('hidden');
+                    urlInput.value = ''; // clear url input since file selected
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // Render admin side list of portfolio items
+        function renderAdminList() {
+            const container = document.getElementById('admin-contents-list');
+            if (!container) return;
+
+            container.innerHTML = '';
+
+            if (portfolioContents.length === 0) {
+                container.innerHTML = `<p class="text-xs text-on-surface-variant italic">No items created yet.</p>`;
+                return;
+            }
+
+            portfolioContents.forEach((item) => {
+                container.innerHTML += `
+                    <div class="flex items-center justify-between p-3 bg-surface-container-high/40 rounded border border-white/5">
+                        <div class="flex items-center space-x-3 min-w-0">
+                            <img src="${item.imageUrl}" class="w-10 h-10 object-cover rounded bg-surface-container" alt="">
+                            <div class="min-w-0">
+                                <h4 class="text-xs text-on-surface font-bold truncate">${item.title}</h4>
+                                <span class="text-[10px] text-primary/70 tracking-wider uppercase font-bold">${item.category}</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2 flex-shrink-0">
+                            <button onclick="editAdminItem('${item.id}')" class="p-1.5 border border-white/5 hover:border-primary/40 text-on-surface-variant hover:text-primary rounded transition-all bg-transparent cursor-pointer">
+                                <span class="material-symbols-outlined text-sm">edit</span>
+                            </button>
+                            <button onclick="deleteAdminItem('${item.id}')" class="p-1.5 border border-white/5 hover:border-error/40 text-on-surface-variant hover:text-error rounded transition-all bg-transparent cursor-pointer">
+                                <span class="material-symbols-outlined text-sm">delete</span>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        // Add/Save Content
+        function saveAdminContent() {
+            const titleInput = document.getElementById('admin-input-title');
+            const categoryInput = document.getElementById('admin-input-category');
+            const descInput = document.getElementById('admin-input-description');
+            const urlInput = document.getElementById('admin-input-image-url');
+
+            const title = titleInput.value.trim();
+            const category = categoryInput.value.trim();
+            const description = descInput.value.trim();
+
+            let imageUrl = '';
+            if (uploadedImageBase64) {
+                imageUrl = uploadedImageBase64;
+            } else {
+                imageUrl = urlInput.value.trim();
+            }
+
+            // Simple validation
+            if (!title || !category || !description || !imageUrl) {
+                alert("Please fill out all fields and select or paste an image.");
+                return;
+            }
+
+            if (editModeItemId) {
+                // Edit existing
+                portfolioContents = portfolioContents.map(item => {
+                    if (item.id === editModeItemId) {
+                        return { ...item, title, category, description, imageUrl };
+                    }
+                    return item;
+                });
+                showAdminToast("Content updated successfully!");
+                cancelEdit();
+            } else {
+                // Add new
+                const newItem = {
+                    id: 'custom-' + Date.now(),
+                    title,
+                    category,
+                    description,
+                    imageUrl
+                };
+                portfolioContents.push(newItem);
+                showAdminToast("Content added successfully!");
+                clearForm();
+
+                // set current index to the new item
+                currentIndex = portfolioContents.length - 1;
+            }
+
+            localStorage.setItem('my_portfolio_contents', JSON.stringify(portfolioContents));
+            renderShowcase();
+            renderAdminList();
+        }
+
+        function editAdminItem(id) {
+            const item = portfolioContents.find(i => i.id === id);
+            if (!item) return;
+
+            editModeItemId = id;
+
+            document.getElementById('form-heading').innerText = "Edit Portfolio Content";
+            document.getElementById('submit-btn-text').innerText = "Save Changes";
+            document.getElementById('cancel-edit-btn').classList.remove('hidden');
+
+            document.getElementById('admin-input-title').value = item.title;
+            document.getElementById('admin-input-category').value = item.category;
+            document.getElementById('admin-input-description').value = item.description;
+
+            const previewImg = document.getElementById('form-image-preview');
+            const placeholder = document.getElementById('form-image-placeholder');
+
+            if (item.imageUrl.startsWith('data:')) {
+                uploadedImageBase64 = item.imageUrl;
+                document.getElementById('admin-input-image-url').value = '';
+            } else {
+                uploadedImageBase64 = null;
+                document.getElementById('admin-input-image-url').value = item.imageUrl;
+            }
+
+            previewImg.src = item.imageUrl;
+            previewImg.classList.remove('hidden');
+            placeholder.classList.add('hidden');
+        }
+
+        function deleteAdminItem(id) {
+            if (!confirm("Are you sure you want to delete this content?")) return;
+
+            portfolioContents = portfolioContents.filter(item => item.id !== id);
+            localStorage.setItem('my_portfolio_contents', JSON.stringify(portfolioContents));
+
+            // Adjust current index if needed
+            if (currentIndex >= portfolioContents.length) {
+                currentIndex = Math.max(0, portfolioContents.length - 1);
+            }
+
+            renderShowcase();
+            renderAdminList();
+            showAdminToast("Content deleted!");
+
+            // If the item deleted was currently being edited, cancel edit
+            if (editModeItemId === id) {
+                cancelEdit();
+            }
+        }
+
+        function cancelEdit() {
+            editModeItemId = null;
+            document.getElementById('form-heading').innerText = "Add New Content";
+            document.getElementById('submit-btn-text').innerText = "Add Content";
+            document.getElementById('cancel-edit-btn').classList.add('hidden');
+            clearForm();
+        }
+
+        function clearForm() {
+            document.getElementById('admin-input-title').value = '';
+            document.getElementById('admin-input-category').value = '';
+            document.getElementById('admin-input-description').value = '';
+            document.getElementById('admin-input-image-url').value = '';
+            document.getElementById('admin-input-image').value = '';
+
+            const previewImg = document.getElementById('form-image-preview');
+            const placeholder = document.getElementById('form-image-placeholder');
+            previewImg.src = '';
+            previewImg.classList.add('hidden');
+            placeholder.classList.remove('hidden');
+
+            uploadedImageBase64 = null;
+        }
+
+        function showAdminToast(msg) {
+            const toast = document.getElementById('admin-save-toast');
+            toast.innerText = msg;
+            toast.style.opacity = '1';
+            setTimeout(() => {
+                toast.style.opacity = '0';
+            }, 3000);
+        }
+
+        // Tab switching logic for Admin Panel
+        function switchAdminTab(tabName) {
+            const tabGallery = document.getElementById('tab-gallery');
+            const tabProfile = document.getElementById('tab-profile');
+            const panelGallery = document.getElementById('panel-gallery');
+            const panelProfile = document.getElementById('panel-profile');
+
+            if (tabName === 'gallery') {
+                tabGallery.classList.add('text-primary', 'border-b-2', 'border-primary');
+                tabGallery.classList.remove('text-on-surface-variant');
+
+                tabProfile.classList.remove('text-primary', 'border-b-2', 'border-primary');
+                tabProfile.classList.add('text-on-surface-variant');
+
+                panelGallery.classList.remove('hidden');
+                panelProfile.classList.add('hidden');
+            } else {
+                tabProfile.classList.add('text-primary', 'border-b-2', 'border-primary');
+                tabProfile.classList.remove('text-on-surface-variant');
+
+                tabGallery.classList.remove('text-primary', 'border-b-2', 'border-primary');
+                tabGallery.classList.add('text-on-surface-variant');
+
+                panelProfile.classList.remove('hidden');
+                panelGallery.classList.add('hidden');
+
+                // Populate and render profile state when switched to profile tab
+                renderProfile();
+            }
+        }
+
+        // Render Profile data to Hero and About Me sections
+        function renderProfile() {
+            // Update Hero Section elements
+            const heroPortrait = document.getElementById('hero-portrait');
+            const heroTitle = document.getElementById('hero-title');
+            if (heroPortrait) heroPortrait.src = profileData.heroImageUrl || profileData.imageUrl || 'profile.jpg';
+            if (heroTitle) {
+                heroTitle.innerText = profileData.heroTitle || 'Welcome to my Portfolio';
+                heroTitle.style.color = profileData.heroTitleColor || '#e5e2e1';
+                heroTitle.style.fontFamily = profileData.heroTitleFont || 'Playfair Display';
+            }
+
+            // Update About Section elements
+            const aboutPortrait = document.getElementById('about-portrait');
+            const aboutTitle = document.getElementById('about-title');
+            const aboutBios = document.getElementById('about-bios');
+            const aboutSkillsTags = document.getElementById('about-skills-tags');
+
+            if (aboutPortrait) aboutPortrait.src = profileData.aboutImageUrl || profileData.imageUrl || 'profile.jpg';
+            if (aboutTitle) aboutTitle.innerText = profileData.aboutTitle || '';
+
+            if (aboutBios) {
+                aboutBios.innerHTML = '';
+                if (profileData.bio1) {
+                    aboutBios.innerHTML += `<p class="leading-relaxed">${profileData.bio1}</p>`;
+                }
+                if (profileData.bio2) {
+                    aboutBios.innerHTML += `<p class="leading-relaxed">${profileData.bio2}</p>`;
+                }
+            }
+
+            if (aboutSkillsTags) {
+                aboutSkillsTags.innerHTML = '';
+                const skillsList = profileData.skills ? profileData.skills.split(',').map(s => s.trim()).filter(Boolean) : [];
+                skillsList.forEach(skill => {
+                    aboutSkillsTags.innerHTML += `
+                        <span class="px-4 py-2 bg-surface-container border border-white/5 rounded-sm font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">
+                            ${skill}
+                        </span>
+                    `;
+                });
+            }
+
+            // Populate form inputs in Admin Customize Profile tab
+            const inputHeroTitle = document.getElementById('profile-input-hero-title');
+            const inputAboutTitle = document.getElementById('profile-input-about-title');
+            const inputBio1 = document.getElementById('profile-input-bio1');
+            const inputBio2 = document.getElementById('profile-input-bio2');
+            const inputSkills = document.getElementById('profile-input-skills');
+
+            const inputHeroColor = document.getElementById('profile-input-hero-color');
+            const labelHeroColorText = document.getElementById('profile-hero-color-text');
+            const inputHeroFont = document.getElementById('profile-input-hero-font');
+
+            const inputHeroImageUrl = document.getElementById('profile-input-hero-image-url');
+            const inputAboutImageUrl = document.getElementById('profile-input-about-image-url');
+
+            if (inputHeroTitle) inputHeroTitle.value = profileData.heroTitle || '';
+            if (inputAboutTitle) inputAboutTitle.value = profileData.aboutTitle || '';
+            if (inputBio1) inputBio1.value = profileData.bio1 || '';
+            if (inputBio2) inputBio2.value = profileData.bio2 || '';
+            if (inputSkills) inputSkills.value = profileData.skills || '';
+
+            if (inputHeroColor) {
+                inputHeroColor.value = profileData.heroTitleColor || '#e5e2e1';
+                if (labelHeroColorText) labelHeroColorText.innerText = profileData.heroTitleColor || '#e5e2e1';
+            }
+            if (inputHeroFont) inputHeroFont.value = profileData.heroTitleFont || 'Playfair Display';
+
+            if (inputHeroImageUrl) {
+                const imgUrl = profileData.heroImageUrl || profileData.imageUrl || '';
+                inputHeroImageUrl.value = imgUrl.startsWith('data:') ? '' : imgUrl;
+            }
+            if (inputAboutImageUrl) {
+                const imgUrl = profileData.aboutImageUrl || profileData.imageUrl || '';
+                inputAboutImageUrl.value = imgUrl.startsWith('data:') ? '' : imgUrl;
+            }
+
+            // Update profile images preview
+            const heroPreview = document.getElementById('profile-hero-preview');
+            const aboutPreview = document.getElementById('profile-about-preview');
+            if (heroPreview) heroPreview.src = profileData.heroImageUrl || profileData.imageUrl || 'profile.jpg';
+            if (aboutPreview) aboutPreview.src = profileData.aboutImageUrl || profileData.imageUrl || 'profile.jpg';
+
+            // Populate social URL inputs in Admin Customize Profile tab
+            const inputFacebook = document.getElementById('profile-input-facebook');
+            const inputLinkedin = document.getElementById('profile-input-linkedin');
+            const inputX = document.getElementById('profile-input-x');
+            const inputDiscord = document.getElementById('profile-input-discord');
+            const inputTelegram = document.getElementById('profile-input-telegram');
+            const inputWhatsapp = document.getElementById('profile-input-whatsapp');
+
+            if (inputFacebook) inputFacebook.value = profileData.facebookLink || '';
+            if (inputLinkedin) inputLinkedin.value = profileData.linkedinLink || '';
+            if (inputX) inputX.value = profileData.xLink || '';
+            if (inputDiscord) inputDiscord.value = profileData.discordLink || '';
+            if (inputTelegram) inputTelegram.value = profileData.telegramLink || '';
+            if (inputWhatsapp) inputWhatsapp.value = profileData.whatsappLink || '';
+
+            // Update floating Hero background social anchors
+            const heroFb = document.getElementById('hero-social-facebook');
+            const heroLi = document.getElementById('hero-social-linkedin');
+            const heroX = document.getElementById('hero-social-x');
+            const heroDc = document.getElementById('hero-social-discord');
+            const heroTg = document.getElementById('hero-social-telegram');
+            const heroWa = document.getElementById('hero-social-whatsapp');
+
+            if (heroFb) heroFb.href = profileData.facebookLink || '#';
+            if (heroLi) heroLi.href = profileData.linkedinLink || '#';
+            if (heroX) heroX.href = profileData.xLink || '#';
+            if (heroDc) heroDc.href = profileData.discordLink || '#';
+            if (heroTg) heroTg.href = profileData.telegramLink || '#';
+            if (heroWa) heroWa.href = profileData.whatsappLink || '#';
+
+            // Update footer social anchors
+            const footerFb = document.getElementById('footer-social-facebook');
+            const footerLi = document.getElementById('footer-social-linkedin');
+            const footerX = document.getElementById('footer-social-x');
+            const footerDc = document.getElementById('footer-social-discord');
+            const footerTg = document.getElementById('footer-social-telegram');
+            const footerWa = document.getElementById('footer-social-whatsapp');
+
+            if (footerFb) footerFb.href = profileData.facebookLink || '#';
+            if (footerLi) footerLi.href = profileData.linkedinLink || '#';
+            if (footerX) footerX.href = profileData.xLink || '#';
+            if (footerDc) footerDc.href = profileData.discordLink || '#';
+            if (footerTg) footerTg.href = profileData.telegramLink || '#';
+            if (footerWa) footerWa.href = profileData.whatsappLink || '#';
+
+            // Update contact section WhatsApp anchor
+            const contactWa = document.getElementById('contact-whatsapp-link');
+            if (contactWa) contactWa.href = profileData.whatsappLink || '#';
+        }
+
+        // Profile picture handlers
+        function handleHeroImageUpload(event) {
+            const file = event.target.files[0];
+            const heroPreview = document.getElementById('profile-hero-preview');
+            const urlInput = document.getElementById('profile-input-hero-image-url');
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    uploadedHeroImageBase64 = e.target.result;
+                    if (heroPreview) heroPreview.src = uploadedHeroImageBase64;
+                    if (urlInput) urlInput.value = ''; // clear url input since file selected
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function updateHeroImagePreviewFromUrl() {
+            const url = document.getElementById('profile-input-hero-image-url').value.trim();
+            const heroPreview = document.getElementById('profile-hero-preview');
+
+            if (url) {
+                if (heroPreview) heroPreview.src = url;
+                uploadedHeroImageBase64 = null; // Clear base64 if url is used
+            } else {
+                if (heroPreview) heroPreview.src = profileData.heroImageUrl || profileData.imageUrl || 'profile.jpg';
+            }
+        }
+
+        function handleAboutImageUpload(event) {
+            const file = event.target.files[0];
+            const aboutPreview = document.getElementById('profile-about-preview');
+            const urlInput = document.getElementById('profile-input-about-image-url');
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    uploadedAboutImageBase64 = e.target.result;
+                    if (aboutPreview) aboutPreview.src = uploadedAboutImageBase64;
+                    if (urlInput) urlInput.value = ''; // clear url input since file selected
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function updateAboutImagePreviewFromUrl() {
+            const url = document.getElementById('profile-input-about-image-url').value.trim();
+            const aboutPreview = document.getElementById('profile-about-preview');
+
+            if (url) {
+                if (aboutPreview) aboutPreview.src = url;
+                uploadedAboutImageBase64 = null; // Clear base64 if url is used
+            } else {
+                if (aboutPreview) aboutPreview.src = profileData.aboutImageUrl || profileData.imageUrl || 'profile.jpg';
+            }
+        }
+
+        // Save customized profile data
+        function saveAdminProfile() {
+            const heroTitle = document.getElementById('profile-input-hero-title').value.trim();
+            const aboutTitle = document.getElementById('profile-input-about-title').value.trim();
+            const bio1 = document.getElementById('profile-input-bio1').value.trim();
+            const bio2 = document.getElementById('profile-input-bio2').value.trim();
+            const skills = document.getElementById('profile-input-skills').value.trim();
+
+            const heroTitleColor = document.getElementById('profile-input-hero-color').value;
+            const heroTitleFont = document.getElementById('profile-input-hero-font').value;
+
+            const heroUrlInput = document.getElementById('profile-input-hero-image-url').value.trim();
+            const aboutUrlInput = document.getElementById('profile-input-about-image-url').value.trim();
+
+            const facebookLink = document.getElementById('profile-input-facebook').value.trim();
+            const linkedinLink = document.getElementById('profile-input-linkedin').value.trim();
+            const xLink = document.getElementById('profile-input-x').value.trim();
+            const discordLink = document.getElementById('profile-input-discord').value.trim();
+            const telegramLink = document.getElementById('profile-input-telegram').value.trim();
+            const whatsappLink = document.getElementById('profile-input-whatsapp').value.trim();
+
+            let heroImageUrl = profileData.heroImageUrl || profileData.imageUrl || 'profile.jpg';
+            if (uploadedHeroImageBase64) {
+                heroImageUrl = uploadedHeroImageBase64;
+            } else if (heroUrlInput) {
+                heroImageUrl = heroUrlInput;
+            }
+
+            let aboutImageUrl = profileData.aboutImageUrl || profileData.imageUrl || 'profile.jpg';
+            if (uploadedAboutImageBase64) {
+                aboutImageUrl = uploadedAboutImageBase64;
+            } else if (aboutUrlInput) {
+                aboutImageUrl = aboutUrlInput;
+            }
+
+            if (!heroTitle || !aboutTitle) {
+                alert("Hero Title and About Title are required.");
+                return;
+            }
+
+            profileData = {
+                heroTitle,
+                aboutTitle,
+                bio1,
+                bio2,
+                skills,
+                heroImageUrl,
+                aboutImageUrl,
+                heroTitleColor,
+                heroTitleFont,
+                facebookLink,
+                linkedinLink,
+                xLink,
+                discordLink,
+                telegramLink,
+                whatsappLink
+            };
+
+            localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
+            renderProfile();
+
+            showProfileToast("Profile updated successfully!");
+        }
+
+        function showProfileToast(msg) {
+            const toast = document.getElementById('profile-save-toast');
+            if (toast) {
+                toast.innerText = msg;
+                toast.style.opacity = '1';
+                setTimeout(() => {
+                    toast.style.opacity = '0';
+                }, 3000);
+            }
+        }
+
+        // Contact Section Form Handlers & Notifications
+        function showNotification(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = `fixed bottom-8 right-8 z-[100] flex items-center space-x-3 px-6 py-4 rounded bg-surface-container-high border ${type === 'success' ? 'border-primary/50 text-primary' : 'border-error/50 text-error'} backdrop-blur-[20px] shadow-2xl transition-all duration-500 transform translate-y-10 opacity-0`;
+
+            const icon = type === 'success' ? 'check_circle' : 'error';
+            toast.innerHTML = `
+                <span class="material-symbols-outlined text-lg">${icon}</span>
+                <span class="font-label-caps text-xs tracking-wider uppercase font-bold">${message}</span>
+            `;
+
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-10', 'opacity-0');
+            }, 100);
+
+            setTimeout(() => {
+                toast.classList.add('translate-y-10', 'opacity-0');
+                setTimeout(() => {
+                    toast.remove();
+                }, 500);
+            }, 4000);
+        }
+
+        async function handleContactSubmit(event) {
+            event.preventDefault();
+
+            const nameInput = document.getElementById('contact-name');
+            const emailInput = document.getElementById('contact-email');
+            const subjectInput = document.getElementById('contact-subject');
+            const messageInput = document.getElementById('contact-message');
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const subject = subjectInput.value.trim();
+            const message = messageInput.value.trim();
+
+            if (!name || !email || !subject || !message) {
+                showNotification("Please fill in all fields.", "error");
+                return;
+            }
+
+            // Show loading state on button
+            const originalBtnHTML = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `
+                <span class="material-symbols-outlined text-sm animate-spin">progress_activity</span>
+                <span>Sending...</span>
+            `;
+            submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+
+            try {
+                const response = await fetch('/api/send-email', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, email, subject, message })
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    showNotification("Message sent! Shahed will contact you soon.", "success");
+                    // Clear inputs on success
+                    nameInput.value = '';
+                    emailInput.value = '';
+                    subjectInput.value = '';
+                    messageInput.value = '';
+                } else {
+                    showNotification(result.error || "Failed to send message. Please try again.", "error");
+                }
+            } catch (err) {
+                // Server might not be running — fallback friendly message
+                console.error("Email server error:", err);
+                showNotification("Something went wrong. Please try again later.", "error");
+            } finally {
+                // Restore button state
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHTML;
+                submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+            }
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', initPortfolio);
+
+        // ─── Smooth Navigation with Navbar Offset ─────────────────────────────────
+        // The navbar is fixed (~80px), so plain anchor links hide sections behind it.
+        // We intercept all nav anchor clicks and scroll with precise offset instead.
+        document.addEventListener('DOMContentLoaded', () => {
+            const NAV_HEIGHT = 88; // px — matches the fixed nav bar height
+
+            // Intercept ALL anchor clicks that point to an on-page #id
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+
+                    // Handle "#" (home/top)
+                    if (targetId === '#') {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        updateActiveNavLink('home');
+                        return;
+                    }
+
+                    const target = document.querySelector(targetId);
+                    if (!target) return; // Let browser handle if target not found
+
+                    e.preventDefault();
+                    const targetTop = target.getBoundingClientRect().top + window.scrollY - NAV_HEIGHT;
+                    window.scrollTo({ top: targetTop, behavior: 'smooth' });
+                });
+            });
+
+            // ─── Active Nav Link Highlight on Scroll ────────────────────────────────
+            // Uses IntersectionObserver to detect which section is in view
+            // and applies the gold active style to the corresponding nav link.
+            const sections = document.querySelectorAll('header[id], section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+            function updateActiveNavLink(activeId) {
+                navLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    const isHome = (href === '#' || href === '#home');
+                    const matches = href === `#${activeId}` || (isHome && activeId === 'home');
+
+                    if (matches) {
+                        link.classList.add('text-primary', 'border-b', 'border-primary/50', 'pb-1');
+                        link.classList.remove('text-on-surface-variant');
+                    } else {
+                        link.classList.remove('text-primary', 'border-b', 'border-primary/50', 'pb-1');
+                        link.classList.add('text-on-surface-variant');
+                    }
+                });
+            }
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            updateActiveNavLink(entry.target.id);
+                        }
+                    });
+                },
+                {
+                    root: null,
+                    // Trigger when section top crosses the bottom of the navbar
+                    rootMargin: `-${NAV_HEIGHT}px 0px -50% 0px`,
+                    threshold: 0
+                }
+            );
+
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
+
+
+</body>
+
+</html>
