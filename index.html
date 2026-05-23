@@ -437,7 +437,7 @@
                 <div class="col-span-1 md:col-span-5 relative">
                     <div class="aspect-[3/4] overflow-hidden rounded-sm relative z-10">
                         <img id="about-portrait" alt="Portrait"
-                            class="w-full h-full object-cover grayscale contrast-125" src="about2.png">
+                            class="w-full h-full object-cover grayscale contrast-125" src="about2.png?v=2">
                     </div>
                     <!-- Decorative Element -->
                     <div class="absolute -bottom-8 -right-8 w-64 h-64 border border-primary/30 z-0 hidden md:block">
@@ -1749,7 +1749,10 @@
             const aboutBios = document.getElementById('about-bios');
             const aboutSkillsTags = document.getElementById('about-skills-tags');
 
-            if (aboutPortrait) aboutPortrait.src = profileData.aboutImageUrl || profileData.imageUrl || 'profile.jpg';
+            if (aboutPortrait) {
+                const imgUrl = profileData.aboutImageUrl || profileData.imageUrl || 'profile.jpg';
+                aboutPortrait.src = imgUrl.startsWith('data:') ? imgUrl : imgUrl + '?v=2';
+            }
             if (aboutTitle) aboutTitle.innerText = profileData.aboutTitle || '';
 
             if (aboutBios) {
@@ -1813,7 +1816,10 @@
             const heroPreview = document.getElementById('profile-hero-preview');
             const aboutPreview = document.getElementById('profile-about-preview');
             if (heroPreview) heroPreview.src = profileData.heroImageUrl || profileData.imageUrl || 'profile.jpg';
-            if (aboutPreview) aboutPreview.src = profileData.aboutImageUrl || profileData.imageUrl || 'profile.jpg';
+            if (aboutPreview) {
+                const imgUrl = profileData.aboutImageUrl || profileData.imageUrl || 'profile.jpg';
+                aboutPreview.src = imgUrl.startsWith('data:') ? imgUrl : imgUrl + '?v=2';
+            }
 
             // Populate social URL inputs in Admin Customize Profile tab
             const inputFacebook = document.getElementById('profile-input-facebook');
