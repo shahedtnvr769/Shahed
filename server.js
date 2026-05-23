@@ -33,7 +33,7 @@ transporter.verify((error) => {
 });
 
 // Contact form endpoint
-app.post('/send-email', async (req, res) => {
+app.post(['/send-email', '/api/send-email'], async (req, res) => {
     const { name, email, subject, message } = req.body;
 
     // Basic validation

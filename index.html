@@ -327,7 +327,8 @@
     <!-- Mobile Nav (Simplified) -->
     <nav
         class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-white/10 md:hidden flex justify-between items-center px-margin-mobile py-4">
-        <a class="font-display-lg text-headline-lg-mobile text-primary tracking-[0.1em] uppercase" href="#">MD SHAHED</a>
+        <a class="font-display-lg text-headline-lg-mobile text-primary tracking-[0.1em] uppercase" href="#">MD
+            SHAHED</a>
         <button class="text-primary"><span class="material-symbols-outlined">menu</span></button>
     </nav>
     <!-- Hero Section -->
@@ -410,10 +411,11 @@
             </div>
 
             <!-- Text details below the image -->
-            <div class="space-y-6">
+            <div class="space-y-3">
+                <p class="font-handwritten text-4xl md:text-5xl text-primary opacity-90">Hi,</p>
                 <h1 id="hero-title"
                     class="font-display-lg text-headline-lg md:text-display-lg text-on-surface tracking-tight leading-tight">
-                    Welcome to my Portfolio</h1>
+                    I'M SHAHED</h1>
             </div>
         </div>
         <div
@@ -435,7 +437,7 @@
                 <div class="col-span-1 md:col-span-5 relative">
                     <div class="aspect-[3/4] overflow-hidden rounded-sm relative z-10">
                         <img id="about-portrait" alt="Portrait"
-                            class="w-full h-full object-cover grayscale contrast-125" src="">
+                            class="w-full h-full object-cover grayscale contrast-125" src="about2.jpg">
                     </div>
                     <!-- Decorative Element -->
                     <div class="absolute -bottom-8 -right-8 w-64 h-64 border border-primary/30 z-0 hidden md:block">
@@ -890,7 +892,7 @@
 
                                     <!-- About Portrait Upload / Paste Link -->
                                     <div
-                                        class="p-4 bg-surface-container-high/20 rounded border border-white/5 space-y-4">
+                                        class="hidden p-4 bg-surface-container-high/20 rounded border border-white/5 space-y-4">
                                         <label
                                             class="block font-label-caps text-[10px] text-primary uppercase tracking-widest font-bold">About
                                             Portrait</label>
@@ -1206,13 +1208,13 @@
         ];
 
         const DEFAULT_PROFILE = {
-            heroTitle: "Welcome to my Portfolio",
+            heroTitle: "I'M SHAHED",
             aboutTitle: "DIGITAL MARKETER & ONLINE PRODUCT SELLER",
             bio1: "Md. Shahed is a results-driven digital marketer and online product seller dedicated to transforming concepts into profitable digital businesses. Combining data-backed strategies with compelling visual storytelling, he builds high-converting campaigns and seamless online shopping experiences.",
             bio2: "Working with modern e-commerce tools and marketing funnels, Shahed focuses on scaling brands, optimizing product visibility, and turning target audiences into loyal customers. Every campaign and store layout is meticulously crafted to deliver measurable growth and a premium brand presence.",
             skills: "Digital Marketing, E-commerce, Conversion Rate Optimization, Funnel Building, Brand Strategy",
             heroImageUrl: "profile.jpg",
-            aboutImageUrl: "profile.jpg",
+            aboutImageUrl: "about2.jpg",
             heroTitleColor: "#e5e2e1",
             heroTitleFont: "Playfair Display",
             facebookLink: "https://www.facebook.com/share/1BikVQhiuC/",
@@ -1249,64 +1251,75 @@
             const savedProfile = localStorage.getItem('my_portfolio_profile');
             if (savedProfile) {
                 profileData = JSON.parse(savedProfile);
+                // Fix old "HI I'M SHAHED" to "I'M SHAHED" (remove duplicate Hi)
+                if (profileData.heroTitle && profileData.heroTitle.startsWith('HI ')) {
+                    profileData.heroTitle = profileData.heroTitle.replace(/^HI\s+/i, '');
+                    localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
+                }
                 // Force update if it's the old default template
                 if (profileData.aboutTitle === "Crafting digital experiences with profound depth." || !profileData.aboutTitle) {
                     profileData = { ...DEFAULT_PROFILE };
                     localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
-                } else {
-                    // Upgrade older schema automatically
-                    let upgraded = false;
-                    if (profileData.imageUrl && !profileData.heroImageUrl) {
-                        profileData.heroImageUrl = profileData.imageUrl;
-                        upgraded = true;
-                    }
-                    if (profileData.imageUrl && !profileData.aboutImageUrl) {
-                        profileData.aboutImageUrl = profileData.imageUrl;
-                        upgraded = true;
-                    }
-                    if (!profileData.heroImageUrl) {
-                        profileData.heroImageUrl = "profile.jpg";
-                        upgraded = true;
-                    }
-                    if (!profileData.aboutImageUrl) {
-                        profileData.aboutImageUrl = "profile.jpg";
-                        upgraded = true;
-                    }
-                    if (!profileData.heroTitleColor) {
-                        profileData.heroTitleColor = "#e5e2e1";
-                        upgraded = true;
-                    }
-                    if (!profileData.heroTitleFont) {
-                        profileData.heroTitleFont = "Playfair Display";
-                        upgraded = true;
-                    }
-                    if (!profileData.facebookLink) {
-                        profileData.facebookLink = DEFAULT_PROFILE.facebookLink;
-                        upgraded = true;
-                    }
-                    if (!profileData.linkedinLink) {
-                        profileData.linkedinLink = DEFAULT_PROFILE.linkedinLink;
-                        upgraded = true;
-                    }
-                    if (!profileData.xLink) {
-                        profileData.xLink = DEFAULT_PROFILE.xLink;
-                        upgraded = true;
-                    }
-                    if (!profileData.discordLink) {
-                        profileData.discordLink = DEFAULT_PROFILE.discordLink;
-                        upgraded = true;
-                    }
-                    if (!profileData.telegramLink) {
-                        profileData.telegramLink = DEFAULT_PROFILE.telegramLink;
-                        upgraded = true;
-                    }
-                    if (!profileData.whatsappLink) {
-                        profileData.whatsappLink = DEFAULT_PROFILE.whatsappLink;
-                        upgraded = true;
-                    }
-                    if (upgraded) {
-                        localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
-                    }
+                }
+
+                // Always force about image to about2.jpg
+                if (profileData.aboutImageUrl !== "about2.jpg") {
+                    profileData.aboutImageUrl = "about2.jpg";
+                    localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
+                }
+
+                // Upgrade older schema automatically
+                let upgraded = false;
+                if (profileData.imageUrl && !profileData.heroImageUrl) {
+                    profileData.heroImageUrl = profileData.imageUrl;
+                    upgraded = true;
+                }
+                if (profileData.imageUrl && !profileData.aboutImageUrl) {
+                    profileData.aboutImageUrl = profileData.imageUrl;
+                    upgraded = true;
+                }
+                if (!profileData.heroImageUrl) {
+                    profileData.heroImageUrl = "profile.jpg";
+                    upgraded = true;
+                }
+                if (!profileData.aboutImageUrl) {
+                    profileData.aboutImageUrl = "profile.jpg";
+                    upgraded = true;
+                }
+                if (!profileData.heroTitleColor) {
+                    profileData.heroTitleColor = "#e5e2e1";
+                    upgraded = true;
+                }
+                if (!profileData.heroTitleFont) {
+                    profileData.heroTitleFont = "Playfair Display";
+                    upgraded = true;
+                }
+                if (!profileData.facebookLink) {
+                    profileData.facebookLink = DEFAULT_PROFILE.facebookLink;
+                    upgraded = true;
+                }
+                if (!profileData.linkedinLink) {
+                    profileData.linkedinLink = DEFAULT_PROFILE.linkedinLink;
+                    upgraded = true;
+                }
+                if (!profileData.xLink) {
+                    profileData.xLink = DEFAULT_PROFILE.xLink;
+                    upgraded = true;
+                }
+                if (!profileData.discordLink) {
+                    profileData.discordLink = DEFAULT_PROFILE.discordLink;
+                    upgraded = true;
+                }
+                if (!profileData.telegramLink) {
+                    profileData.telegramLink = DEFAULT_PROFILE.telegramLink;
+                    upgraded = true;
+                }
+                if (!profileData.whatsappLink) {
+                    profileData.whatsappLink = DEFAULT_PROFILE.whatsappLink;
+                    upgraded = true;
+                }
+                if (upgraded) {
+                    localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
                 }
             } else {
                 profileData = { ...DEFAULT_PROFILE };
@@ -1725,7 +1738,7 @@
             const heroTitle = document.getElementById('hero-title');
             if (heroPortrait) heroPortrait.src = profileData.heroImageUrl || profileData.imageUrl || 'profile.jpg';
             if (heroTitle) {
-                heroTitle.innerText = profileData.heroTitle || 'Welcome to my Portfolio';
+                heroTitle.innerText = profileData.heroTitle || "I'M SHAHED";
                 heroTitle.style.color = profileData.heroTitleColor || '#e5e2e1';
                 heroTitle.style.fontFamily = profileData.heroTitleFont || 'Playfair Display';
             }
@@ -1956,7 +1969,7 @@
                 bio2,
                 skills,
                 heroImageUrl,
-                aboutImageUrl,
+                aboutImageUrl: "about2.jpg",
                 heroTitleColor,
                 heroTitleFont,
                 facebookLink,

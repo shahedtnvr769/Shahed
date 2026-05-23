@@ -403,14 +403,15 @@
         <div class="flex flex-col items-center space-y-8 max-w-3xl z-10">
             <!-- Image on top -->
             <div
-                class="relative w-[260px] h-[350px] md:w-[300px] md:h-[400px] rounded-lg overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.6)] bg-surface-container transition-transform duration-700 hover:scale-[1.02]">
+                class="relative w-[190px] h-[250px] md:w-[300px] md:h-[400px] rounded-lg overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.6)] bg-surface-container transition-transform duration-700 hover:scale-[1.02]">
                 <img id="hero-portrait" alt="Md. Shahed Portrait"
                     class="w-full h-full object-cover transition-all duration-1000 ease-in-out" src="profile.jpg">
                 <div class="absolute inset-0 bg-gradient-to-t from-background/30 to-transparent"></div>
             </div>
 
             <!-- Text details below the image -->
-            <div class="space-y-6">
+            <div class="space-y-3">
+                <p class="font-handwritten text-4xl md:text-5xl text-primary opacity-90">Hi,</p>
                 <h1 id="hero-title"
                     class="font-display-lg text-headline-lg md:text-display-lg text-on-surface tracking-tight leading-tight">
                     Welcome to my Portfolio</h1>
@@ -435,7 +436,7 @@
                 <div class="col-span-1 md:col-span-5 relative">
                     <div class="aspect-[3/4] overflow-hidden rounded-sm relative z-10">
                         <img id="about-portrait" alt="Portrait"
-                            class="w-full h-full object-cover grayscale contrast-125" src="">
+                            class="w-full h-full object-cover grayscale contrast-125" src="about2.jpg">
                     </div>
                     <!-- Decorative Element -->
                     <div class="absolute -bottom-8 -right-8 w-64 h-64 border border-primary/30 z-0 hidden md:block">
@@ -890,7 +891,7 @@
 
                                     <!-- About Portrait Upload / Paste Link -->
                                     <div
-                                        class="p-4 bg-surface-container-high/20 rounded border border-white/5 space-y-4">
+                                        class="hidden p-4 bg-surface-container-high/20 rounded border border-white/5 space-y-4">
                                         <label
                                             class="block font-label-caps text-[10px] text-primary uppercase tracking-widest font-bold">About
                                             Portrait</label>
@@ -1206,13 +1207,13 @@
         ];
 
         const DEFAULT_PROFILE = {
-            heroTitle: "Welcome to my Portfolio",
+            heroTitle: "I'M SHAHED",
             aboutTitle: "DIGITAL MARKETER & ONLINE PRODUCT SELLER",
             bio1: "Md. Shahed is a results-driven digital marketer and online product seller dedicated to transforming concepts into profitable digital businesses. Combining data-backed strategies with compelling visual storytelling, he builds high-converting campaigns and seamless online shopping experiences.",
             bio2: "Working with modern e-commerce tools and marketing funnels, Shahed focuses on scaling brands, optimizing product visibility, and turning target audiences into loyal customers. Every campaign and store layout is meticulously crafted to deliver measurable growth and a premium brand presence.",
             skills: "Digital Marketing, E-commerce, Conversion Rate Optimization, Funnel Building, Brand Strategy",
             heroImageUrl: "profile.jpg",
-            aboutImageUrl: "profile.jpg",
+            aboutImageUrl: "about2.jpg",
             heroTitleColor: "#e5e2e1",
             heroTitleFont: "Playfair Display",
             facebookLink: "https://www.facebook.com/share/1BikVQhiuC/",
@@ -1249,64 +1250,75 @@
             const savedProfile = localStorage.getItem('my_portfolio_profile');
             if (savedProfile) {
                 profileData = JSON.parse(savedProfile);
+                // Fix old "HI I'M SHAHED" to "I'M SHAHED" (remove duplicate Hi)
+                if (profileData.heroTitle && profileData.heroTitle.startsWith('HI ')) {
+                    profileData.heroTitle = profileData.heroTitle.replace(/^HI\s+/i, '');
+                    localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
+                }
                 // Force update if it's the old default template
                 if (profileData.aboutTitle === "Crafting digital experiences with profound depth." || !profileData.aboutTitle) {
                     profileData = { ...DEFAULT_PROFILE };
                     localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
-                } else {
-                    // Upgrade older schema automatically
-                    let upgraded = false;
-                    if (profileData.imageUrl && !profileData.heroImageUrl) {
-                        profileData.heroImageUrl = profileData.imageUrl;
-                        upgraded = true;
-                    }
-                    if (profileData.imageUrl && !profileData.aboutImageUrl) {
-                        profileData.aboutImageUrl = profileData.imageUrl;
-                        upgraded = true;
-                    }
-                    if (!profileData.heroImageUrl) {
-                        profileData.heroImageUrl = "profile.jpg";
-                        upgraded = true;
-                    }
-                    if (!profileData.aboutImageUrl) {
-                        profileData.aboutImageUrl = "profile.jpg";
-                        upgraded = true;
-                    }
-                    if (!profileData.heroTitleColor) {
-                        profileData.heroTitleColor = "#e5e2e1";
-                        upgraded = true;
-                    }
-                    if (!profileData.heroTitleFont) {
-                        profileData.heroTitleFont = "Playfair Display";
-                        upgraded = true;
-                    }
-                    if (!profileData.facebookLink) {
-                        profileData.facebookLink = DEFAULT_PROFILE.facebookLink;
-                        upgraded = true;
-                    }
-                    if (!profileData.linkedinLink) {
-                        profileData.linkedinLink = DEFAULT_PROFILE.linkedinLink;
-                        upgraded = true;
-                    }
-                    if (!profileData.xLink) {
-                        profileData.xLink = DEFAULT_PROFILE.xLink;
-                        upgraded = true;
-                    }
-                    if (!profileData.discordLink) {
-                        profileData.discordLink = DEFAULT_PROFILE.discordLink;
-                        upgraded = true;
-                    }
-                    if (!profileData.telegramLink) {
-                        profileData.telegramLink = DEFAULT_PROFILE.telegramLink;
-                        upgraded = true;
-                    }
-                    if (!profileData.whatsappLink) {
-                        profileData.whatsappLink = DEFAULT_PROFILE.whatsappLink;
-                        upgraded = true;
-                    }
-                    if (upgraded) {
-                        localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
-                    }
+                }
+
+                // Always force about image to about2.jpg
+                if (profileData.aboutImageUrl !== "about2.jpg") {
+                    profileData.aboutImageUrl = "about2.jpg";
+                    localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
+                }
+
+                // Upgrade older schema automatically
+                let upgraded = false;
+                if (profileData.imageUrl && !profileData.heroImageUrl) {
+                    profileData.heroImageUrl = profileData.imageUrl;
+                    upgraded = true;
+                }
+                if (profileData.imageUrl && !profileData.aboutImageUrl) {
+                    profileData.aboutImageUrl = profileData.imageUrl;
+                    upgraded = true;
+                }
+                if (!profileData.heroImageUrl) {
+                    profileData.heroImageUrl = "profile.jpg";
+                    upgraded = true;
+                }
+                if (!profileData.aboutImageUrl) {
+                    profileData.aboutImageUrl = "profile.jpg";
+                    upgraded = true;
+                }
+                if (!profileData.heroTitleColor) {
+                    profileData.heroTitleColor = "#e5e2e1";
+                    upgraded = true;
+                }
+                if (!profileData.heroTitleFont) {
+                    profileData.heroTitleFont = "Playfair Display";
+                    upgraded = true;
+                }
+                if (!profileData.facebookLink) {
+                    profileData.facebookLink = DEFAULT_PROFILE.facebookLink;
+                    upgraded = true;
+                }
+                if (!profileData.linkedinLink) {
+                    profileData.linkedinLink = DEFAULT_PROFILE.linkedinLink;
+                    upgraded = true;
+                }
+                if (!profileData.xLink) {
+                    profileData.xLink = DEFAULT_PROFILE.xLink;
+                    upgraded = true;
+                }
+                if (!profileData.discordLink) {
+                    profileData.discordLink = DEFAULT_PROFILE.discordLink;
+                    upgraded = true;
+                }
+                if (!profileData.telegramLink) {
+                    profileData.telegramLink = DEFAULT_PROFILE.telegramLink;
+                    upgraded = true;
+                }
+                if (!profileData.whatsappLink) {
+                    profileData.whatsappLink = DEFAULT_PROFILE.whatsappLink;
+                    upgraded = true;
+                }
+                if (upgraded) {
+                    localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
                 }
             } else {
                 profileData = { ...DEFAULT_PROFILE };
@@ -1956,7 +1968,7 @@
                 bio2,
                 skills,
                 heroImageUrl,
-                aboutImageUrl,
+                aboutImageUrl: "about2.jpg",
                 heroTitleColor,
                 heroTitleFont,
                 facebookLink,
