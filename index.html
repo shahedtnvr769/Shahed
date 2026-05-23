@@ -437,7 +437,7 @@
                 <div class="col-span-1 md:col-span-5 relative">
                     <div class="aspect-[3/4] overflow-hidden rounded-sm relative z-10">
                         <img id="about-portrait" alt="Portrait"
-                            class="w-full h-full object-cover grayscale contrast-125" src="about2.jpg">
+                            class="w-full h-full object-cover grayscale contrast-125" src="about2.png">
                     </div>
                     <!-- Decorative Element -->
                     <div class="absolute -bottom-8 -right-8 w-64 h-64 border border-primary/30 z-0 hidden md:block">
@@ -1214,7 +1214,7 @@
             bio2: "Working with modern e-commerce tools and marketing funnels, Shahed focuses on scaling brands, optimizing product visibility, and turning target audiences into loyal customers. Every campaign and store layout is meticulously crafted to deliver measurable growth and a premium brand presence.",
             skills: "Digital Marketing, E-commerce, Conversion Rate Optimization, Funnel Building, Brand Strategy",
             heroImageUrl: "profile.jpg",
-            aboutImageUrl: "about2.jpg",
+            aboutImageUrl: "about2.png",
             heroTitleColor: "#e5e2e1",
             heroTitleFont: "Playfair Display",
             facebookLink: "https://www.facebook.com/share/1BikVQhiuC/",
@@ -1262,9 +1262,9 @@
                     localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
                 }
 
-                // Always force about image to about2.jpg
-                if (profileData.aboutImageUrl !== "about2.jpg") {
-                    profileData.aboutImageUrl = "about2.jpg";
+                // Always force about image to about2.png
+                if (profileData.aboutImageUrl !== "about2.png") {
+                    profileData.aboutImageUrl = "about2.png";
                     localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
                 }
 
@@ -1969,7 +1969,7 @@
                 bio2,
                 skills,
                 heroImageUrl,
-                aboutImageUrl: "about2.jpg",
+                aboutImageUrl: "about2.png",
                 heroTitleColor,
                 heroTitleFont,
                 facebookLink,
