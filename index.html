@@ -311,7 +311,7 @@
     <nav
         class="fixed top-0 w-full z-50 bg-background/70 backdrop-blur-[40px] border-b border-white/10 transition-all duration-500 ease-in-out hidden md:block">
         <div class="flex justify-between items-center px-12 py-6 w-full max-w-none">
-            <a class="font-display-lg text-headline-md text-primary tracking-[0.2em] uppercase" href="#">MD.Shahed</a>
+            <a id="header-brand-logo" class="font-display-lg text-headline-md text-primary tracking-[0.2em] uppercase" href="#">MD.Shahed</a>
             <div class="flex space-x-8 ml-auto">
                 <a class="text-primary border-b border-primary/50 pb-1 font-label-caps text-label-caps hover:text-primary transition-colors duration-700 ease-in-out uppercase"
                     href="#">Home</a>
@@ -539,7 +539,7 @@
                     </div>
                 </div>
                 <div class="col-span-1 md:col-span-7 md:pl-12">
-                    <span class="font-label-caps text-label-caps text-primary tracking-[0.2em] uppercase mb-6 block">MD.
+                    <span id="hero-brand-name" class="font-label-caps text-label-caps text-primary tracking-[0.2em] uppercase mb-6 block">MD.
                         SHAHED</span>
                     <h2 id="about-title" class="font-headline-lg text-headline-lg text-on-surface mb-8">DIGITAL MARKETER
                         & ONLINE PRODUCT SELLER</h2>
@@ -811,6 +811,54 @@
                                         placeholder="Welcome Title">
                                 </div>
 
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                    <div>
+                                        <label
+                                            class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Brand Name</label>
+                                        <input id="profile-input-brand-name" type="text"
+                                            class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                            placeholder="e.g. MD. Shahed">
+                                    </div>
+                                    <div>
+                                        <label
+                                            class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Contact Email</label>
+                                        <input id="profile-input-email" type="email"
+                                            class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                            placeholder="e.g. shahed@example.com">
+                                    </div>
+                                    <div>
+                                        <label
+                                            class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Contact Phone</label>
+                                        <input id="profile-input-phone" type="text"
+                                            class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                            placeholder="e.g. +880 1839079238">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                    <div>
+                                        <label
+                                            class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Brand Name</label>
+                                        <input id="profile-input-brand-name" type="text"
+                                            class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                            placeholder="e.g. MD. Shahed">
+                                    </div>
+                                    <div>
+                                        <label
+                                            class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Contact Email</label>
+                                        <input id="profile-input-email" type="email"
+                                            class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                            placeholder="e.g. shahed@example.com">
+                                    </div>
+                                    <div>
+                                        <label
+                                            class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Contact Phone</label>
+                                        <input id="profile-input-phone" type="text"
+                                            class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                            placeholder="e.g. +880 1839079238">
+                                    </div>
+                                </div>
+
                                 <!-- Hero Title Styling Controls -->
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div>
@@ -1072,7 +1120,7 @@
                     <!-- Contact Details -->
                     <div class="space-y-6 pt-6">
                         <!-- Email Link -->
-                        <a href="mailto:shahedtnvr15@gmail.com"
+                        <a id="contact-email-link" href="mailto:shahedtnvr15@gmail.com"
                             class="flex items-center space-x-4 group bg-surface-container/20 p-4 rounded border border-white/5 hover:border-primary/30 transition-all">
                             <div
                                 class="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-background transition-all duration-500">
@@ -1082,7 +1130,7 @@
                                 <span
                                     class="block font-label-caps text-[9px] text-on-surface-variant uppercase tracking-widest font-bold">Email
                                     Address</span>
-                                <span
+                                <span id="contact-email-text"
                                     class="text-sm font-body-md text-on-surface group-hover:text-primary transition-colors">shahedtnvr15@gmail.com</span>
                             </div>
                         </a>
@@ -1098,7 +1146,7 @@
                                 <span
                                     class="block font-label-caps text-[9px] text-on-surface-variant uppercase tracking-widest font-bold">WhatsApp
                                     / Mobile</span>
-                                <span
+                                <span id="contact-phone-text"
                                     class="text-sm font-body-md text-on-surface group-hover:text-primary transition-colors">+880
                                     1839079238</span>
                             </div>
@@ -1180,12 +1228,12 @@
             <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
                 <!-- Left: Branding & Copyright -->
                 <div class="col-span-1 md:col-span-5 space-y-6">
-                    <div class="font-display-lg text-4xl text-primary tracking-[0.2em] uppercase">MD. Shahed</div>
+                    <div id="footer-brand-logo" class="font-display-lg text-4xl text-primary tracking-[0.2em] uppercase">MD. Shahed</div>
                     <p class="text-sm font-body-md text-on-surface-variant leading-relaxed max-w-sm">
                         Digital marketer and online product seller dedicated to crafting strategic digital solutions and
                         seamless e-commerce growth.
                     </p>
-                    <span
+                    <span id="footer-copyright"
                         class="block font-label-caps text-[10px] text-on-surface-variant/60 uppercase tracking-widest leading-relaxed">
                         © 2026 MD. Shahed. Crafted for the discerning.
                     </span>
@@ -1456,6 +1504,12 @@
         async function saveAdminProfileFirestore() {
             if (!isAdminLoggedIn) { alert('Admin login required!'); return; }
 
+            const brandName = document.getElementById('profile-input-brand-name')?.value.trim();
+            const emailAddress = document.getElementById('profile-input-email')?.value.trim();
+            const phoneNumber = document.getElementById('profile-input-phone')?.value.trim();
+            const brandName = document.getElementById('profile-input-brand-name')?.value.trim();
+            const emailAddress = document.getElementById('profile-input-email')?.value.trim();
+            const phoneNumber = document.getElementById('profile-input-phone')?.value.trim();
             const heroTitle = document.getElementById('profile-input-hero-title')?.value.trim();
             const aboutTitle = document.getElementById('profile-input-about-title')?.value.trim();
             const bio1 = document.getElementById('profile-input-bio1')?.value.trim();
@@ -1487,6 +1541,7 @@
             else if (aboutUrlInput) aboutImageUrl = aboutUrlInput;
 
             const newProfile = {
+                brandName, emailAddress, phoneNumber,
                 heroTitle, aboutTitle, bio1, bio2, skills,
                 heroImageUrl, aboutImageUrl,
                 heroTitleColor, heroTitleFont,
@@ -1569,6 +1624,9 @@
         ];
 
         const DEFAULT_PROFILE = {
+            brandName: "MD. Shahed",
+            emailAddress: "shahedtnvr15@gmail.com",
+            phoneNumber: "+880 1839079238",
             heroTitle: "I'M SHAHED",
             aboutTitle: "DIGITAL MARKETER & ONLINE PRODUCT SELLER",
             bio1: "Md. Shahed is a results-driven digital marketer and online product seller dedicated to transforming concepts into profitable digital businesses. Combining data-backed strategies with compelling visual storytelling, he builds high-converting campaigns and seamless online shopping experiences.",
@@ -1699,6 +1757,18 @@
                 }
                 if (!profileData.whatsappLink) {
                     profileData.whatsappLink = DEFAULT_PROFILE.whatsappLink;
+                    upgraded = true;
+                }
+                if (!profileData.brandName) {
+                    profileData.brandName = DEFAULT_PROFILE.brandName;
+                    upgraded = true;
+                }
+                if (!profileData.emailAddress) {
+                    profileData.emailAddress = DEFAULT_PROFILE.emailAddress;
+                    upgraded = true;
+                }
+                if (!profileData.phoneNumber) {
+                    profileData.phoneNumber = DEFAULT_PROFILE.phoneNumber;
                     upgraded = true;
                 }
                 if (upgraded) {
@@ -2072,6 +2142,29 @@
 
         // Render Profile data to Hero and About Me sections
         function renderProfile() {
+            // Update Brand Name in Header & Footer
+            const headerBrandLogo = document.getElementById('header-brand-logo');
+            const heroBrandName = document.getElementById('hero-brand-name');
+            const footerBrandLogo = document.getElementById('footer-brand-logo');
+            const footerCopyright = document.getElementById('footer-copyright');
+
+            const currentBrandName = profileData.brandName || "MD. Shahed";
+            if (headerBrandLogo) headerBrandLogo.innerText = currentBrandName;
+            if (heroBrandName) heroBrandName.innerText = currentBrandName;
+            if (footerBrandLogo) footerBrandLogo.innerText = currentBrandName;
+            if (footerCopyright) footerCopyright.innerText = `© 2026 ${currentBrandName}. Crafted for the discerning.`;
+
+            // Update Email Link and Text in Contact Section
+            const contactEmailLink = document.getElementById('contact-email-link');
+            const contactEmailText = document.getElementById('contact-email-text');
+            const currentEmail = profileData.emailAddress || "shahedtnvr15@gmail.com";
+            if (contactEmailLink) contactEmailLink.href = `mailto:${currentEmail}`;
+            if (contactEmailText) contactEmailText.innerText = currentEmail;
+
+            // Update Phone text in Contact Section
+            const contactPhoneText = document.getElementById('contact-phone-text');
+            if (contactPhoneText) contactPhoneText.innerText = profileData.phoneNumber || "+880 1839079238";
+
             // Update Hero Section elements
             const heroPortrait = document.getElementById('hero-portrait');
             const heroTitle = document.getElementById('hero-title');
@@ -2122,6 +2215,20 @@
             const inputBio1 = document.getElementById('profile-input-bio1');
             const inputBio2 = document.getElementById('profile-input-bio2');
             const inputSkills = document.getElementById('profile-input-skills');
+            const inputBrandName = document.getElementById('profile-input-brand-name');
+            const inputEmail = document.getElementById('profile-input-email');
+            const inputPhone = document.getElementById('profile-input-phone');
+
+            if (inputBrandName) inputBrandName.value = profileData.brandName || '';
+            if (inputEmail) inputEmail.value = profileData.emailAddress || '';
+            if (inputPhone) inputPhone.value = profileData.phoneNumber || '';
+            const inputBrandName = document.getElementById('profile-input-brand-name');
+            const inputEmail = document.getElementById('profile-input-email');
+            const inputPhone = document.getElementById('profile-input-phone');
+
+            if (inputBrandName) inputBrandName.value = profileData.brandName || '';
+            if (inputEmail) inputEmail.value = profileData.emailAddress || '';
+            if (inputPhone) inputPhone.value = profileData.phoneNumber || '';
 
             const inputHeroColor = document.getElementById('profile-input-hero-color');
             const labelHeroColorText = document.getElementById('profile-hero-color-text');
