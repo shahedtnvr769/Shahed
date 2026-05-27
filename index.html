@@ -1026,7 +1026,7 @@
 
                                     <!-- About Portrait Upload / Paste Link -->
                                     <div
-                                        class="hidden p-4 bg-surface-container-high/20 rounded border border-white/5 space-y-4">
+                                        class="p-4 bg-surface-container-high/20 rounded border border-white/5 space-y-4">
                                         <label
                                             class="block font-label-caps text-[10px] text-primary uppercase tracking-widest font-bold">About
                                             Portrait</label>
@@ -1689,12 +1689,6 @@
                     localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
                 }
 
-                // Always force about image to about2.png
-                if (profileData.aboutImageUrl !== "about2.png") {
-                    profileData.aboutImageUrl = "about2.png";
-                    localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
-                }
-
                 // Upgrade older schema automatically
                 let upgraded = false;
                 if (profileData.imageUrl && !profileData.heroImageUrl) {
@@ -1710,7 +1704,7 @@
                     upgraded = true;
                 }
                 if (!profileData.aboutImageUrl) {
-                    profileData.aboutImageUrl = "profile.jpg";
+                    profileData.aboutImageUrl = "about2.png";
                     upgraded = true;
                 }
                 if (!profileData.heroTitleColor) {
@@ -2168,7 +2162,7 @@
             const aboutSkillsTags = document.getElementById('about-skills-tags');
 
             if (aboutPortrait) {
-                const imgUrl = profileData.aboutImageUrl || profileData.imageUrl || 'profile.jpg';
+                const imgUrl = profileData.aboutImageUrl || profileData.imageUrl || 'about2.png';
                 aboutPortrait.src = imgUrl.startsWith('data:') ? imgUrl : imgUrl + '?v=2';
             }
             if (aboutTitle) aboutTitle.innerText = profileData.aboutTitle || '';
