@@ -491,7 +491,7 @@
             </a>
 
             <!-- WhatsApp Logo (Right Lower) -->
-            <a href="#" target="_blank" rel="noopener noreferrer" id="hero-social-whatsapp"
+            <a href="https://wa.me/qr/VLOX4EFRBAFGI1" target="_blank" rel="noopener noreferrer" id="hero-social-whatsapp"
                 class="absolute bottom-[22%] right-[8%] md:right-[15%] pointer-events-auto floating-logo-container animate-float-6 opacity-25 hover:text-[#25D366] hover:drop-shadow-[0_0_15px_rgba(37,211,102,0.6)]">
                 <svg viewBox="0 0 24 24" class="w-10 h-10 md:w-12 md:h-12 transition-colors duration-300"
                     fill="currentColor">
@@ -2265,7 +2265,7 @@
             if (heroX) heroX.href = profileData.xLink || '#';
             if (heroDc) heroDc.href = profileData.discordLink || '#';
             if (heroTg) heroTg.href = profileData.telegramLink || '#';
-            if (heroWa) heroWa.href = profileData.whatsappLink || '#';
+            if (heroWa) heroWa.href = profileData.whatsappLink || 'https://wa.me/qr/VLOX4EFRBAFGI1';
 
             // Update footer social anchors
             const footerFb = document.getElementById('footer-social-facebook');
@@ -2280,11 +2280,11 @@
             if (footerX) footerX.href = profileData.xLink || '#';
             if (footerDc) footerDc.href = profileData.discordLink || '#';
             if (footerTg) footerTg.href = profileData.telegramLink || '#';
-            if (footerWa) footerWa.href = profileData.whatsappLink || '#';
+            if (footerWa) footerWa.href = profileData.whatsappLink || 'https://wa.me/qr/VLOX4EFRBAFGI1';
 
             // Update contact section WhatsApp anchor
             const contactWa = document.getElementById('contact-whatsapp-link');
-            if (contactWa) contactWa.href = profileData.whatsappLink || '#';
+            if (contactWa) contactWa.href = profileData.whatsappLink || 'https://wa.me/qr/VLOX4EFRBAFGI1';
         }
 
         // Profile picture handlers
