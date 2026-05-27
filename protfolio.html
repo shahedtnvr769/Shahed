@@ -2160,8 +2160,7 @@
             const aboutSkillsTags = document.getElementById('about-skills-tags');
 
             if (aboutPortrait) {
-                const imgUrl = profileData.aboutImageUrl || profileData.imageUrl || 'about2.png';
-                aboutPortrait.src = imgUrl.startsWith('data:') ? imgUrl : imgUrl + '?v=2';
+                aboutPortrait.src = 'about2.png';
             }
             if (aboutTitle) aboutTitle.innerText = profileData.aboutTitle || '';
 
