@@ -548,8 +548,7 @@
                     <span id="hero-brand-name"
                         class="font-label-caps text-label-caps text-primary tracking-[0.2em] uppercase mb-6 block">MD.
                         SHAHED</span>
-                    <h2 id="about-title" class="font-headline-lg text-headline-lg text-on-surface mb-8">DIGITAL MARKETER
-                        & ONLINE PRODUCT SELLER</h2>
+                    <h2 id="about-title" class="font-headline-lg text-headline-lg text-on-surface mb-8">WEBSITE CREATOR & DATA ENTRY SPECIALIST</h2>
                     <div id="about-bios" class="space-y-6 text-on-surface-variant font-body-lg text-body-lg mb-12">
                         <!-- Dynamic bios go here -->
                     </div>
@@ -817,6 +816,24 @@
                                         class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
                                         placeholder="Welcome Title">
                                 </div>
+
+                                <div>
+                                     <label
+                                         class="block font-label-caps text-[10px] text-primary uppercase tracking-widest mb-2 font-bold">Online Skills
+                                         / Tags (separated by commas)</label>
+                                     <input id="profile-input-skills" type="text"
+                                         class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                         placeholder="e.g. WEB DESIGN, WEBSITE CREATION, DATA ENTRY">
+                                 </div>
+
+                                 <div class="mt-4">
+                                     <label
+                                         class="block font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest mb-2 font-bold">Offline Skills
+                                         / Tags (separated by commas)</label>
+                                     <input id="profile-input-offline-skills" type="text"
+                                         class="w-full bg-surface-container-high border border-white/10 rounded px-4 py-3 text-on-surface focus:outline-none focus:border-primary transition-all font-body-md shadow-inner"
+                                         placeholder="e.g. HOTEL MANAGEMENT, HOSPITALITY SERVICES">
+                                 </div>
 
                                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                     <div>
@@ -1217,8 +1234,7 @@
                     <div id="footer-brand-logo"
                         class="font-display-lg text-4xl text-primary tracking-[0.2em] uppercase">MD. Shahed</div>
                     <p class="text-sm font-body-md text-on-surface-variant leading-relaxed max-w-sm">
-                        Digital marketer and online product seller dedicated to crafting strategic digital solutions and
-                        seamless e-commerce growth.
+                        Website Creator and Data Entry Specialist dedicated to building clean, fast-responsive websites and accurate data solutions.
                     </p>
                     <span id="footer-copyright"
                         class="block font-label-caps text-[10px] text-on-surface-variant/60 uppercase tracking-widest leading-relaxed">
@@ -1499,6 +1515,8 @@
             const bio1 = document.getElementById('profile-input-bio1')?.value.trim();
             const bio2 = document.getElementById('profile-input-bio2')?.value.trim();
             const skills = document.getElementById('profile-input-skills')?.value.trim();
+            const onlineSkills = skills;
+            const offlineSkills = document.getElementById('profile-input-offline-skills')?.value.trim();
             const heroTitleColor = document.getElementById('profile-input-hero-color')?.value;
             const heroTitleFont = document.getElementById('profile-input-hero-font')?.value;
             const facebookLink = document.getElementById('profile-input-facebook')?.value.trim();
@@ -1526,7 +1544,7 @@
 
             const newProfile = {
                 brandName, emailAddress, phoneNumber,
-                heroTitle, aboutTitle, bio1, bio2, skills,
+                heroTitle, aboutTitle, bio1, bio2, skills, onlineSkills, offlineSkills,
                 heroImageUrl, aboutImageUrl,
                 heroTitleColor, heroTitleFont,
                 facebookLink, linkedinLink, xLink,
@@ -1612,10 +1630,12 @@
             emailAddress: "shahedtnvr15@gmail.com",
             phoneNumber: "+880 1839079238",
             heroTitle: "I'M SHAHED",
-            aboutTitle: "DIGITAL MARKETER & ONLINE PRODUCT SELLER",
-            bio1: "Md. Shahed is a results-driven digital marketer and online product seller dedicated to transforming concepts into profitable digital businesses. Combining data-backed strategies with compelling visual storytelling, he builds high-converting campaigns and seamless online shopping experiences.",
-            bio2: "Working with modern e-commerce tools and marketing funnels, Shahed focuses on scaling brands, optimizing product visibility, and turning target audiences into loyal customers. Every campaign and store layout is meticulously crafted to deliver measurable growth and a premium brand presence.",
-            skills: "Digital Marketing, E-commerce, Conversion Rate Optimization, Funnel Building, Brand Strategy",
+            aboutTitle: "WEBSITE CREATOR & DATA ENTRY SPECIALIST",
+            bio1: "Md. Shahed is a passionate Website Creator and Data Entry Specialist dedicated to building functional websites and managing accurate data solutions. Combining design skills with attention to detail, he helps businesses build their online presence and organize critical data efficiently.",
+            bio2: "Focused on modern web design tools and precise data entry tasks, Shahed aims to deliver clean, fast-responsive websites and reliable database management for businesses looking to grow.",
+            skills: "WEB DESIGN, WEBSITE CREATION, DATA ENTRY, DATA MANAGEMENT, WORDPRESS / ELEMENTOR, EXCEL & SPREADSHEETS",
+            onlineSkills: "WEB DESIGN, WEBSITE CREATION, DATA ENTRY, DATA MANAGEMENT, WORDPRESS / ELEMENTOR, EXCEL & SPREADSHEETS",
+            offlineSkills: "HOTEL MANAGEMENT, HOSPITALITY SERVICES, AGRICULTURAL KNOWLEDGE, AGRI-TECH / FARM MANAGEMENT, OPERATIONS MANAGEMENT",
             heroImageUrl: "profile.jpg",
             aboutImageUrl: "about2.png",
             heroTitleColor: "#e5e2e1",
@@ -1681,9 +1701,9 @@
                     profileData.heroTitle = profileData.heroTitle.replace(/^HI\s+/i, '');
                     localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
                 }
-                // Force update if it's the old default template
-                if (profileData.aboutTitle === "Crafting digital experiences with profound depth." || !profileData.aboutTitle) {
-                    profileData = { ...DEFAULT_PROFILE };
+                // Force update if it's the old default template or missing offlineSkills
+                if (profileData.aboutTitle === "Crafting digital experiences with profound depth." || profileData.aboutTitle === "DIGITAL MARKETER & ONLINE PRODUCT SELLER" || !profileData.offlineSkills) {
+                    profileData = { ...DEFAULT_PROFILE, ...profileData, onlineSkills: DEFAULT_PROFILE.onlineSkills, offlineSkills: DEFAULT_PROFILE.offlineSkills };
                     localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
                 }
 
@@ -2176,14 +2196,53 @@
 
             if (aboutSkillsTags) {
                 aboutSkillsTags.innerHTML = '';
-                const skillsList = profileData.skills ? profileData.skills.split(',').map(s => s.trim()).filter(Boolean) : [];
-                skillsList.forEach(skill => {
-                    aboutSkillsTags.innerHTML += `
-                        <span class="px-4 py-2 bg-surface-container border border-white/5 rounded-sm font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">
-                            ${skill}
-                        </span>
+
+                const rawOnline = profileData.onlineSkills || profileData.skills || "WEB DESIGN, WEBSITE CREATION, DATA ENTRY, DATA MANAGEMENT, WORDPRESS / ELEMENTOR, EXCEL & SPREADSHEETS";
+                const onlineList = rawOnline.split(',').map(s => s.trim()).filter(Boolean);
+
+                const rawOffline = profileData.offlineSkills || "HOTEL MANAGEMENT, HOSPITALITY SERVICES, AGRICULTURAL KNOWLEDGE, AGRI-TECH / FARM MANAGEMENT, OPERATIONS MANAGEMENT";
+                const offlineList = rawOffline.split(',').map(s => s.trim()).filter(Boolean);
+
+                let skillsHTML = `<div class="space-y-8 w-full">`;
+
+                if (onlineList.length > 0) {
+                    skillsHTML += `
+                        <div>
+                            <div class="flex items-center space-x-2 mb-3">
+                                <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                                <span class="font-label-caps text-xs text-primary tracking-[0.25em] uppercase font-bold">ONLINE SKILLS</span>
+                            </div>
+                            <div class="flex flex-wrap gap-3">
+                                ${onlineList.map(skill => `
+                                    <span class="px-4 py-2 bg-surface-container border border-primary/20 hover:border-primary/50 rounded-sm font-label-caps text-[11px] text-on-surface uppercase tracking-wider transition-all shadow-sm">
+                                        ${skill}
+                                    </span>
+                                `).join('')}
+                            </div>
+                        </div>
                     `;
-                });
+                }
+
+                if (offlineList.length > 0) {
+                    skillsHTML += `
+                        <div>
+                            <div class="flex items-center space-x-2 mb-3">
+                                <span class="w-2 h-2 rounded-full bg-on-surface-variant/60"></span>
+                                <span class="font-label-caps text-xs text-on-surface-variant/80 tracking-[0.25em] uppercase font-bold">OFFLINE SKILLS</span>
+                            </div>
+                            <div class="flex flex-wrap gap-3">
+                                ${offlineList.map(skill => `
+                                    <span class="px-4 py-2 bg-surface-container-high border border-white/10 hover:border-white/20 rounded-sm font-label-caps text-[11px] text-on-surface-variant uppercase tracking-wider transition-all">
+                                        ${skill}
+                                    </span>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+
+                skillsHTML += `</div>`;
+                aboutSkillsTags.innerHTML = skillsHTML;
             }
 
             // Populate form inputs in Admin Customize Profile tab
@@ -2192,6 +2251,7 @@
             const inputBio1 = document.getElementById('profile-input-bio1');
             const inputBio2 = document.getElementById('profile-input-bio2');
             const inputSkills = document.getElementById('profile-input-skills');
+            const inputOfflineSkills = document.getElementById('profile-input-offline-skills');
             const inputBrandName = document.getElementById('profile-input-brand-name');
             const inputEmail = document.getElementById('profile-input-email');
             const inputPhone = document.getElementById('profile-input-phone');
@@ -2211,7 +2271,8 @@
             if (inputAboutTitle) inputAboutTitle.value = profileData.aboutTitle || '';
             if (inputBio1) inputBio1.value = profileData.bio1 || '';
             if (inputBio2) inputBio2.value = profileData.bio2 || '';
-            if (inputSkills) inputSkills.value = profileData.skills || '';
+            if (inputSkills) inputSkills.value = profileData.onlineSkills || profileData.skills || '';
+            if (inputOfflineSkills) inputOfflineSkills.value = profileData.offlineSkills || '';
 
             if (inputHeroColor) {
                 inputHeroColor.value = profileData.heroTitleColor || '#e5e2e1';
@@ -2355,6 +2416,8 @@
                 const bio1 = document.getElementById('profile-input-bio1').value.trim();
                 const bio2 = document.getElementById('profile-input-bio2').value.trim();
                 const skills = document.getElementById('profile-input-skills').value.trim();
+                const onlineSkills = skills;
+                const offlineSkills = document.getElementById('profile-input-offline-skills')?.value.trim() || '';
                 const heroTitleColor = document.getElementById('profile-input-hero-color').value;
                 const heroTitleFont = document.getElementById('profile-input-hero-font').value;
                 const heroUrlInput = document.getElementById('profile-input-hero-image-url').value.trim();
@@ -2371,7 +2434,7 @@
                 let aboutImageUrl = profileData.aboutImageUrl || 'profile.jpg';
                 if (uploadedAboutImageBase64) aboutImageUrl = uploadedAboutImageBase64;
                 else if (aboutUrlInput) aboutImageUrl = aboutUrlInput;
-                profileData = { heroTitle, aboutTitle, bio1, bio2, skills, heroImageUrl, aboutImageUrl, heroTitleColor, heroTitleFont, facebookLink, linkedinLink, xLink, discordLink, telegramLink, whatsappLink };
+                profileData = { heroTitle, aboutTitle, bio1, bio2, skills, onlineSkills, offlineSkills, heroImageUrl, aboutImageUrl, heroTitleColor, heroTitleFont, facebookLink, linkedinLink, xLink, discordLink, telegramLink, whatsappLink };
                 localStorage.setItem('my_portfolio_profile', JSON.stringify(profileData));
                 renderProfile(); showProfileToast("Profile updated successfully!");
             }
